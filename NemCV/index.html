@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="Styles/variables.css">
     <link rel="stylesheet" type="text/css" href="Styles/index.css">
     <title>nemCV</title>
-
 </head>
 
 <body>
 
     <nav class="nav">
         <ul>
-            <li><button class="item" onclick="location.href = '#section1';"></button></li>
-            <li><button class="item" onclick="location.href = '#section2';"></button></li>
-            <li><button class="item" onclick="location.href = '#section3';"></button></li>
+            <li><button class="item" id="nav-section1" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button checked="true" class="item" id="nav-section2" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" id="nav-section3" onclick="onProgressBarClick(this.id)"></button></li>
         </ul>
     </nav>
 
     <div class="section blue section1" id="section1">
-        <img src="#" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
+        <img class="banner" src="resources/banner.png" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
 
 
         <ul class="sellings-points">
@@ -47,4 +46,5 @@
         <button onclick="window.location.href='form.html';">Kom igang</button>
     </div>
 
+    <script type="text/javascript" src="index.js"></script>
 </body>
