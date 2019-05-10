@@ -1,8 +1,11 @@
 
 
+
 body {
     width: 100%;
-    height: 600px;
+    height: 100%;
+    background-image: linear-gradient(-50deg,
+    var(--secondary-color),  var(--primary-color));
 }
 
 h1{
@@ -47,27 +50,11 @@ h1{
 
 \*----------------------------------------------------------------------------*/
 
-.section {
+section {
     width: 100%;
     height: 1080px;
-    background-color: var(--primary-color);
     padding: 0px;
+    background-color: transparent;
 }
 
-/*----------------------------------------------------------------------------\
 
- #TEMP
-
- *----------------------------------------------------------------------------*/
-
-.blue{
-    background-color: blue;
-}
-
-.red{
-    background-color: red;
-}
-
-.green{
-    background-color: green;
-}
