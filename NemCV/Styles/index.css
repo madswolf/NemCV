@@ -9,16 +9,6 @@ h1{
     font-family: var(--headline-large);
 }
 
-h2{
-
-}
-
-h3{
-
-}
-
-
-
 /*----------------------------------------------------------------------------*\
 
 #NAVIGATION
@@ -30,17 +20,25 @@ h3{
     width: 200px;
     background-color: transparent;
     position: fixed;
-    right: -100px;
+    right: -10%;
     top: 40%;
 }
 
-.nav .item1, .nav .item2 , .nav .item3 , .nav .item4  {
+.nav .item {
     height: 30px;
     width: 30px;
-    border: transparent solid 2px;
-    background-color: var(--secondary-secondary-color);
+    border: var(--secondary-secondary-color) solid 2px;
+    background-color: transparent;
     border-radius: 50%;
     margin: 1.0rem;
+}
+
+.nav .item:hover {
+    background: var(--secondary-secondary-color);
+}
+
+.nav .item::selection {
+    background: var(--secondary-secondary-color);
 }
 
 /*----------------------------------------------------------------------------*\
@@ -54,4 +52,22 @@ h3{
     height: 1080px;
     background-color: var(--primary-color);
     padding: 0px;
+}
+
+/*----------------------------------------------------------------------------\
+
+ #TEMP
+
+ *----------------------------------------------------------------------------*/
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
 }

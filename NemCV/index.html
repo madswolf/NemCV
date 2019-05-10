@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 
-<head>
+<head lang="da"
 
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="Styles/reset.css">
     <link rel="stylesheet" href="Styles/variables.css">
     <link rel="stylesheet" type="text/css" href="Styles/index.css">
+    <title>nemCV</title>
 
 </head>
 
 <body>
 
-    <div class="nav">
-    <div class="item1"><a href=""></a></div>
-    <div class="item2"></div>
-    <div class="item3"></div>
-    <div class="item4"></div>
+    <nav class="nav">
+        <ul>
+            <li><button class="item" onclick="location.href = '#section1';"></button></li>
+            <li><button class="item" onclick="location.href = '#section2';"></button></li>
+            <li><button class="item" onclick="location.href = '#section3';"></button></li>
+        </ul>
+    </nav>
+
+    <div class="section blue section1" id="section1">
+        <img src="#" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
+
+
+        <ul class="sellings-points">
+            <li class="selling-point">
+                Bæ
+            </li>
+            <li class="selling-point">
+                Orm
+            </li>
+            <li class="selling-point">
+                Gris
+            </li>
+        </ul>
+
     </div>
 
-    <div class="section">
-        <h1>Hej</h1>
+    <div class="section red section2" id="section2">
+        <h1>Hello 2 My Friend </h1>
     </div>
 
-    <div class="section">
-        <h1>Hello 2 </h1>
-    </div>
-
-    <div class="section">
-        <h1>Hello 3 </h1>
-    </div>
-
-    <div class="section">
-        <h1>Hello 4 </h1>
+    <div class="section green section3" id="section3">
+        <h1>Hello 3 My Homie </h1>
+        <button onclick="window.location.href='form.html';">Kom igang</button>
     </div>
 
 </body>
