@@ -7,8 +7,8 @@
     --secondary-secondary-color: #FFFFFF;
     --secondary-variant-color: #018786;
 
-    --headline-large: 'Montserrat:700'. sans-serif;
-    --headline-small: 'Montserrat:400'. sans-serif;
+    --headline-large: 'Montserrat:700', sans-serif;
+    --headline-small: 'Montserrat:400', sans-serif;
     --bodytext: 'Raleway:400', sans-serif;
     --buttontext: 'Raleway:600', sans-serif;
     --captiontext: 'Raleway:100', sans-serif;
