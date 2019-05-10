@@ -37,7 +37,7 @@ h1{
     background: var(--secondary-secondary-color);
 }
 
-.nav .item:focus {
+.nav .in-viewport {
     background: var(--secondary-secondary-color);
 }
 

@@ -1,8 +1,16 @@
 
 
 function onProgressBarClick(event){
-    console.log(event.slice(4));
+    document.getElementById(event).classList.add("in-viewport");
     const element = document.getElementById(event.slice(4));
+    const  bounding = element.getBoundingClientRect();
+    console.log(bounding);
     element.scrollIntoView({behavior: "smooth"});
 }
+
+
+
+window.addEventListener('scroll', () => {
+
+});
 
