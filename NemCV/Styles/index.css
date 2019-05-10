@@ -8,8 +8,52 @@ body {
     var(--secondary-color),  var(--primary-color));
 }
 
+/*----------------------------------------------------------------------------*\
+
+#TYPEOGRAFY
+
+\*----------------------------------------------------------------------------*/
+
+
 h1{
     font-family: var(--headline-large);
+    color: var(--secondary-secondary-color);
+    font-size: var(--headline-large-size);
+    font-weight: var(--headline-large-font-weight) ;
+    letter-spacing: var(--headline-large-letter-spaceing);
+}
+
+h2{
+    font-family: var(--headline-small);
+    color: var(--secondary-secondary-color);
+    font-size: var(--headline-small-size);
+    font-weight: var(--headline-small-font-weight);
+    letter-spacing: var(--headline-small-letter-spaceing);
+
+}
+
+h3{
+    font-family: var(--buttontext);
+    color: var(--secondary-secondary-color);
+    font-size: var(--buttontext-size);
+    font-weight: var(--buttontext-font-weight);
+    letter-spacing: var(--buttontext-letter-spaceing);
+}
+
+h4{
+    font-family: var(--captiontext);
+    color: var(--secondary-secondary-color);
+    font-size: var(--captiontext-size);
+    font-weight: var(--captiontext-font-weight);
+    letter-spacing: var(--captiontext-letter-spaceing);
+}
+
+p{
+    font-family: var(--bodytext);
+    color: var(--secondary-secondary-color);
+    font-size: var(--bodytext-size);
+    font-weight: var(--bodytext-font-weight) ;
+    letter-spacing: var(--bodytext-letter-spaceing);
 }
 
 /*----------------------------------------------------------------------------*\
