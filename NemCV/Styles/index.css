@@ -63,7 +63,6 @@ section {
 
 .banner{
     width: 100%;
-
     background-color: transparent;
 }
 
@@ -73,14 +72,16 @@ section {
 
  *----------------------------------------------------------------------------*/
 
-.blue{
-    background-color: blue;
+.sellings-points {
+    display: flex;
+    flex-direction: row;
 }
 
-.red{
-    background-color: red;
+.selling-point {
+
 }
 
-.green{
-    background-color: green;
+.selling-point img {
+    height: 200px;
+    width: 200px;
 }
