@@ -2,7 +2,13 @@ class FormWebcomponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = "<link rel='stylesheet' href='./Styles/form.css' >" +
             "<button class='collapsible'  onclick='showContent(this)' id='button'>hej med dig</button>" +
-            "<p class='content' id='content'>asdw</p>";
+            "<div class='content' id='content'>" +
+            "<slot name='title'></slot>" +
+            "<slot name='form'></slot>" +
+            "<slot name='add-button'></slot>" +
+            "<button onclick='dontShowContent(this)'>OK</button>" +
+            "<button onclick='dontShowContent(this)'>CANCEL</button>" +
+            "</div>";
     }
 }
 customElements.define('form-component', FormWebcomponent);
@@ -13,12 +19,13 @@ function showContent(collapsible) {
     console.log(collapsible);
     let content = collapsible.nextElementSibling;
     console.log(content);
-    if (content.style.display === "block") {
-        content.style.display = "none";
-        content.style.height = "100%";
-        collapsible.style.width = "50%";
-    } else {
-        content.style.display = "block";
-        collapsible.style.width = "100%";
-    }
+    collapsible.style.display = "none";
+    content.style.display = "block";
+    content.style.height = "100%";
+}
+
+function dontShowContent(goBackButton) {
+    var parent =goBackButton.parentElement;
+    parent.style.display = "none";
+    parent.previousElementSibling.style.display = "block";
 }
