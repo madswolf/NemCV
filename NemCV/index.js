@@ -21,7 +21,7 @@ const checkViewingPort = () => {
         for(let i = 0; i < allElements.length; i++){
             const boundingRect = allElements[i].getBoundingClientRect();
             const  top = boundingRect.top;
-            if(top < windowHeight && top >= 0){
+            if((top < windowHeight && top > 0) || (boundingRect.bottom >= innerHeight && top <= 0)){
                 navButtons[i].classList.add("in-viewport");
             } else{
                 navButtons[i].classList.remove("in-viewport");
@@ -48,7 +48,7 @@ window.addEventListener('wheel', (event) => {
 
 });
 
-const portionOfNewViewForAutoScroll = 0.1;
+const portionOfNewViewForAutoScroll = 0.2;
 function scrollEndHandler() {
     let prevElement = null;
     for(let i = 0; i < allElements.length; i++) {
