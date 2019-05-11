@@ -1,6 +1,6 @@
 class FormWebcomponent extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = "<link rel='stylesheet' href='./Styles/form.css' >" +
+        this.innerHTML = "<link rel='stylesheet' href='./styles/form.css' >" +
             "<button class='collapsible'  onclick='showContent(this)' id='button'>hej med dig</button>" +
             "<p class='content' id='content'>asdw</p>";
     }
