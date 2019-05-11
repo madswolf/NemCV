@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/variables.css">
         <link rel="stylesheet" href="styles/generic.css">
         <link rel="stylesheet" type="text/css" href="styles/index.css">
+
         <title>nemCV</title>
     </head>
 
@@ -13,16 +14,16 @@
 
     <nav class="nav">
         <ul>
-            <li><button class="item" onclick="location.href = '#section1';"></button></li>
-            <li><button class="item" onclick="location.href = '#section2';"></button></li>
-            <li><button class="item" onclick="location.href = '#section3';"></button></li>
+            <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
         </ul>
     </nav>
 
 
     <section class="section " id="section1">
 
-        <img src="#" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
+        <img class="banner" src="resources/banner.png" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
 
 
         <ul class="sellings-points">
@@ -50,6 +51,8 @@
         <h1>Hello 3 My Homie </h1>
         <button onclick="window.location.href='form.html';">Kom igang</button>
     </section>
+
+    <script type="text/javascript" src="index.js"></script>
 
     </body>
 
