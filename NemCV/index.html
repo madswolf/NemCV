@@ -12,22 +12,16 @@
 
 <body>
 
-<nav class="nav">
-    <ul>
-        <li><button class="item" onclick="location.href = '#section1';"></button></li>
-        <li><button class="item" onclick="location.href = '#section2';"></button></li>
-        <li><button class="item" onclick="location.href = '#section3';"></button></li>
-    </ul>
-</nav>
+    <nav class="nav">
+        <ul>
+            <li><button class="item" id="nav-section1" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" id="nav-section2" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" id="nav-section3" onclick="onProgressBarClick(this.id)"></button></li>
+        </ul>
+    </nav>
 
-
-<section class="section " id="section1">
-    <h1>Stuff</h1>
-    <h2>stuff</h2>
-    <h3>stuff</h3>
-    <h4>stuff</h4>
-    <p> stuff</p>
-    <img src="#" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
+    <div class="section blue section1" id="section1">
+        <img class="banner" src="resources/banner.png" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
 
 
     <ul class="sellings-points">
@@ -53,6 +47,7 @@
     <button onclick="window.location.href='form.html';">Kom igang</button>
 </section>
 
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>

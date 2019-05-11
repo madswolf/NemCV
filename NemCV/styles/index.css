@@ -1,9 +1,7 @@
 
 
-
 body {
     width: 100%;
-    height: 100%;
     background-image: linear-gradient(-50deg,
     var(--secondary-color),  var(--primary-color));
 }
@@ -16,12 +14,11 @@ body {
 \*----------------------------------------------------------------------------*/
 
 .nav {
-    height: 200px;
-    width: 200px;
     background-color: transparent;
     position: fixed;
-    right: -10%;
-    top: 40%;
+    right: 10px;
+    top: 50%;
+    margin-top: -75px;
 }
 
 .nav .item {
@@ -30,14 +27,14 @@ body {
     border: var(--secondary-secondary-color) solid 2px;
     background-color: transparent;
     border-radius: 50%;
-    margin: 1.0rem;
+    margin: 10px;
 }
 
 .nav .item:hover {
     background: var(--secondary-secondary-color);
 }
 
-.nav .item::selection {
+.nav .in-viewport {
     background: var(--secondary-secondary-color);
 }
 
@@ -47,11 +44,38 @@ body {
 
 \*----------------------------------------------------------------------------*/
 
-section {
+.section {
     width: 100%;
-    height: 1080px;
-    padding: 0px;
-    background-color: transparent;
+    height: 100vh;
+    background-color: var(--primary-color);
+
 }
 
+/*----------------------------------------------------------------------------*\
 
+#FRONTPAGE
+
+\*----------------------------------------------------------------------------*/
+
+.banner{
+    width: 100%;
+
+}
+
+/*----------------------------------------------------------------------------\
+
+ #TEMP
+
+ *----------------------------------------------------------------------------*/
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
