@@ -4,7 +4,7 @@ class FormWebcomponent extends HTMLElement {
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
             <link rel='stylesheet' href='./Styles/form.css' >
-            <button class='collapsible'  onclick='showContent(this)' id='button'><slot name='title'></slot></button>
+            <button class='collapsible'  onclick='showContent(this)' id='button'><slot name='title' class='title'></slot></button>
             <div class='content' id='content'>
                 <h1 class='title'></h1>
                 <slot name='form'></slot>
@@ -21,9 +21,9 @@ const element = document.createElement("form-component");
 
 function showContent(collapsible) {
     let content = collapsible.nextElementSibling;
-    let title = collapsible.firstChild;
-    console.log(title);
-    content.firstChild.innerHtml = title;
+    let title = collapsible.firstElementChild.textContent;
+    console.log(collapsible.getElementsByClassName("title"));
+
 
     collapsible.style.display = "none";
     content.style.display = "block";
