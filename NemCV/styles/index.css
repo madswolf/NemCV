@@ -70,15 +70,16 @@ body {
  *----------------------------------------------------------------------------*/
 
 .sellings-points {
+    padding: 20px;
     display: flex;
     flex-direction: row;
 }
 
 .selling-point {
-
+    margin: 20px;
 }
 
 .selling-point img {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
 }
