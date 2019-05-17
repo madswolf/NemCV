@@ -83,11 +83,10 @@ async function validateCV(cv){
             if(response.ok === true){
                 alert("CV  modtaget")
             } else{
-                console.log()
+                alert(response.json())
             }
 
             alert(response.status);
     });
 
 }
-
