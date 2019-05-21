@@ -5,8 +5,8 @@ let workList = [];
 function createAccomplishment(event){
     event.preventDefault();
    
-    const formElement= document.getElementById(event.target.id);
-    const children = formElement.children;
+    const formElement = document.getElementById(event.target.id);
+    const children  = formElement.children;
     const   place   =  children[2].value;
     const   type    =  children[4].value;
     const startYear =  children[6].value;

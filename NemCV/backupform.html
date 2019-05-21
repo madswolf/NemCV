@@ -9,8 +9,10 @@
     <link rel="stylesheet" type="text/css" href="styles/form.css">
 
     <script type="text/javascript" src="scripts/education_form.js" defer></script>
+    <script type="text/javascript" src="scripts/info_form.js" defer></script>
     <script type="text/javascript" src="scripts/sector.js" defer></script>
     <script type="text/javascript" src="scripts/api.js" defer></script>
+
 
     <title>Form</title>
 
@@ -18,7 +20,7 @@
     <body>
 
     <section class="section">
-        <form>
+        <form onsubmit="getUserInfo(event)" id="info-form">
                 <h2>Info</h2>
             
                 <label for="name"><b>Navn: </b></label>
@@ -81,15 +83,15 @@
         <ul id="work-list">
         </ul>
 
-        <form>
+        <form onsubmit="getUserDescription(event)" id="description-form">
             <h2>Fritekst</h2>
         
             <input type="text" placeholder="">
 
-            <button type="button" class="btn">GEM</button>
-            <button type="reset" class="btn">ANNULLER</button>
+            <button class="btn">GEM</button>
+            <button class="btn">ANNULLER</button>
 
-          </form>
+        </form>
 
         <form onsubmit="addSector(event)" id="sector-form">
             <h2>Sektorer</h2>

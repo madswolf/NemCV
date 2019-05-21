@@ -2,14 +2,16 @@ let sectorList = [];
 
 function addSector(event){
     event.preventDefault();
-    if(sectorList.length == 3){
+    if(sectorList.length === 3){
         //Lav metode som alerter brugeren om at listen er fuld
         return;
     }
     const sectorDropDown = document.getElementById("sectors");
-    let selected = sectorDropDown.options[sectorDropDown.selectedIndex];
-    sectorList.push(selected);
+    const selected = sectorDropDown.options[sectorDropDown.selectedIndex];
+    sectorList.push(selected.label);
     selected.disabled = true;
+
+    console.log(JSON.stringify(sectorList));
     
     updateSectorList();
     
@@ -20,9 +22,9 @@ function updateSectorList(){
     ul.innerHTML = "";
 
     let counter = 0;
-    sectorList.forEach(element => {
+    for(let i = 0; i < sectorList.length; i++) {
         const newList = document.createElement("LI");
-        const textNode = document.createTextNode(element.text);
+        const textNode = document.createTextNode(sectorList[i]);
 
         const button = document.createElement("button");
         button.innerHTML = "X";
@@ -34,7 +36,7 @@ function updateSectorList(){
         ul.appendChild(newList);
 
         counter++;
-    })
+    }
 }
 
 function deleteSectorElement(id){

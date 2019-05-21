@@ -43,32 +43,19 @@ function dropdownError(){
 function createCvForValidation(){
 
     const education = eduList;
+    const employers = workList;
+    const sectors = sectorList;
+    const userInfo = info;
 
-    const sectors = [];
-    sectors.push("Transport");
-    sectors.push("Kultur og fritid");
+    const name = userInfo.name;
+    const age = userInfo.age;
+    const email = userInfo.email;
+    const city = userInfo.city;
+    const picture = userInfo.picture;
 
 
 
-    const cv = {"name": "Hest McHestert",
-        "age": 34,
-        "email": "hest@hestenettet.dk",
-        "city": "Hestved",
-        "picture": "http://hest.com/hest.jpg",
-        "description": "Håber jeg finder det fede arbejde",
-        "employers":[
-            {
-                "name": "Google",
-                "title": "Pedel",
-                "from": "2012"
-            },
-            {
-                "name": "Stalden",
-                "title": "Vallak",
-                "from": "2007-01-01",
-                "to": "2012-03-01"
-            }
-        ], education, sectors};
+    const cv = {name, age, email, city, picture, description, employers, education, sectors};
 
     validateCV(cv);
 
