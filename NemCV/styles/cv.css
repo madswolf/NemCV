@@ -1,50 +1,65 @@
 
 body {
     width: 100%;
-    background-image: linear-gradient(-50deg,
-    var(--secondary-color),  var(--primary-color));
+    background-color: rgb(27,29,30, 0.5);
+    margin: auto;
+    padding-top: 20px;
+
 }
-.content{
-    width: 80%;
-    background-color: #f1f1f1;
+
+
+.content {
+    max-width: 90%;
+    margin: auto;
+    background-color: white; /*linear-gradient(-50deg,
+    var(--secondary-color),  var(--primary-color)); */
+    box-shadow: 5px 5px black;
+
 }
+
 
 .flex-icongrafics {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 20px;
 
 }
 .svg-line {
-    width: 100%;
     padding: 0;
     margin: 0;
 
 }
+.svg-line-head-flex {
+  display: flex;
+  width: 10px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2px;
+  margin: 0;
+}
 
 
 /* Content positionering*/
-.flex-content {
+.columns {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
-.flex-content-progressbar {
-    width:auto;
+
+.columns .column-head .row1, .columns .column-head .row2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-
-/*info*/
-.flex-info{
-    align-self: center;
-    display: flex;
-    height: 100%;
-    width: 90%;
-    flex-direction: column;
+.columns .column-head .row1 .item , .columns .column-head .row2 .item {
+    width: 50%;
+    align-content: center;
+    align-items: center;
     justify-content: center;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 5%;
+}
+
+.columns .columns-bottom {
+    width: 80%;
 }
