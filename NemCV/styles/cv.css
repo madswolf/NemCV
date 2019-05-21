@@ -3,18 +3,12 @@ body {
     width: 100%;
     background-color: rgb(27,29,30, 0.5);
     margin: auto;
-    padding-top: 20px;
-
 }
 
 
 .content {
-    max-width: 90%;
     margin: auto;
-    background-color: white; /*linear-gradient(-50deg,
-    var(--secondary-color),  var(--primary-color)); */
-    box-shadow: 5px 5px black;
-
+    background-color: white;
 }
 
 
@@ -24,10 +18,18 @@ body {
     height: 20px;
 
 }
+
+line{
+stroke:rgb(0,0,0);
+stroke-width:2;
+
+}
+
 .svg-line {
     padding: 0;
     margin: 0;
-
+    color: black;
+    height: 20px;
 }
 .svg-line-head-flex {
   display: flex;
@@ -62,4 +64,15 @@ body {
 
 .columns .columns-bottom {
     width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .columns .column-head .row1, .columns .column-head .row2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
 }
