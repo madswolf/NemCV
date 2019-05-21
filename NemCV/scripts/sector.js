@@ -10,8 +10,6 @@ function addSector(event){
     const selected = sectorDropDown.options[sectorDropDown.selectedIndex];
     sectorList.push(selected.label);
     selected.disabled = true;
-
-    console.log(JSON.stringify(sectorList));
     
     updateSectorList();
     
