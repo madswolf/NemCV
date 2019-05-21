@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/form.css">
 
     <script type="text/javascript" src="scripts/education_form.js" defer></script>
+    <script type="text/javascript" src="scripts/sector.js" defer></script>
     <script type="text/javascript" src="scripts/api.js" defer></script>
 
     <title>Form</title>
@@ -18,7 +19,6 @@
 
     <section class="section">
         <form>
-            <div class="container">
                 <h2>Info</h2>
             
                 <label for="name"><b>Navn: </b></label>
@@ -36,18 +36,17 @@
                 <label for="pic"><b>Billede: </b></label>
                 <input type="text" placeholder="" id="pic">
                 <button class="btn">GEM</button>
-                <button class="btn">ANNULER</button>
-            </div>
+                <button class="btn">ANNULLER</button>
         </form>
 
         <form onsubmit="createAccomplishment(event)" id="education-form">
               <h2>Uddannelse</h2>
           
               <label for="edu-place"><b>Uddannelsessted: </b></label>
-              <input type="text" placeholder="lol" id="edu-place" required>
+              <input type="text" placeholder="" id="edu-place" required>
           
               <label for="edu-type"><b>Titel: </b></label>
-              <input type="text" placeholder="lol2" id="edu-type" required>
+              <input type="text" placeholder="" id="edu-type" required>
           
               <label for="edu-startyear"><b>Startår: </b></label>
               <input type="number" placeholder="9999" id="edu-startyear" required>
@@ -56,19 +55,19 @@
               <input type="number" placeholder="9999" id="edu-endyear">
 
               <button class="btn">TILFØJ</button>
-              <button class="btn">ANNULER</button>
+              <button class="btn">ANNULLER</button>
         </form>
-              <ul id="education-list">
-              </ul>
+        <ul id="education-list">
+        </ul>
 
         <form onsubmit="createAccomplishment(event)" id="work-form">
               <h2>Erfaring</h2>
           
               <label for="work-place"><b>Arbejdssted: </b></label>
-              <input type="text" placeholder="lol3" id="work-place" required>
+              <input type="text" placeholder="" id="work-place" required>
           
               <label for="work-type"><b>Stilling: </b></label>
-              <input type="text" placeholder="lol4" id="work-type" required>
+              <input type="text" placeholder="" id="work-type" required>
           
               <label for="work-startyear"><b>Startår: </b></label>
               <input type="number" placeholder="9999" id="work-startyear" required>
@@ -77,32 +76,33 @@
               <input type="number" placeholder="9999" id="work-endyear">
 
               <button class="btn">TILFØJ</button>
-              <button class="btn">ANNULER</button>   
+              <button class="btn">ANNULLER</button>   
         </form>
-              <ul id="work-list">
-              </ul>
+        <ul id="work-list">
+        </ul>
 
         <form>
-              <div class="container">
-                <h2>Fritekst</h2>
-            
-                <input type="text" placeholder="lol7">
-  
-                <button type="button" class="btn">GEM</button>
-                <button type="reset" class="btn">ANNULLER</button>
-              </div>
+            <h2>Fritekst</h2>
+        
+            <input type="text" placeholder="">
+
+            <button type="button" class="btn">GEM</button>
+            <button type="reset" class="btn">ANNULLER</button>
 
           </form>
 
-        <form>
-            <h1>Sectors</h1>
-            <div class="container">
-                <label for="sectors">Sectors:</label>
-                <select name="Sectors" id="sectors" disabled>
-                    <option selected disabled>Loading...</option>
-                </select>
-            </div>
+        <form onsubmit="addSector(event)" id="sector-form">
+            <h2>Sektorer</h2>
+
+            <label for="sectors">Sektorer (maks 3):</label>
+            <select name="Sectors" id="sectors" disabled>
+                <option selected disabled>Loading...</option>
+            </select>
+
+            <button class="btn">TILFØJ</button>
         </form>
+        <ul id="sector-list">
+        </ul>
 
         <button onclick="createCvForValidation()">TEST SEND API</button>
 

@@ -1,28 +1,27 @@
 
-eduList = [];
-workList = [];
+let eduList = [];
+let workList = [];
 
 function createAccomplishment(event){
-    console.log("Clicked");
     event.preventDefault();
    
     const formElement= document.getElementById(event.target.id);
-    let children = formElement.children;
-    const place = children[2].value;
-    const type = children[4].value;
-    const startYear = children[6].value;
-    const endYear = children[8].value;
+    const children = formElement.children;
+    const   place   =  children[2].value;
+    const   type    =  children[4].value;
+    const startYear =  children[6].value;
+    const  endYear  =  children[8].value;
 
     const accomplishment = {
-        "name": place,
+        "name" : place,
         "title": type,
-        "from": startYear,
-        "to": endYear
+        "from" : startYear,
+        "to"   : endYear
     };
 
     if(formElement.id.includes("work")){
         workList.push(accomplishment);
-        updateList("work",workList);
+        updateList("work", workList);
     }else {
         eduList.push(accomplishment);
         updateList("education", eduList);
@@ -45,12 +44,13 @@ function updateList(name, list){
     list.forEach(element => {
         const newList = document.createElement("LI");
         const textNode = document.createTextNode(
-            kind + ": " + element.name + ", " + element.title + " " + element.from + " - " + element.to);
+            kind + ": " + element.name + ", " + element.title 
+            + " " + element.from + " - " + element.to);
 
         const button = document.createElement("button");
         button.innerHTML = "X";
         button.setAttribute("id", name + "-delete-" + counter);
-        button.setAttribute("onclick", "deleteListElement(this.id)",);
+        button.setAttribute("onclick", "deleteListElement(this.id)");
 
         newList.appendChild(textNode);
         newList.appendChild(button);
