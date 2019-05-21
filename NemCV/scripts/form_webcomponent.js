@@ -3,7 +3,11 @@ class FormWebcomponent extends HTMLElement {
         super();
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
+            <link rel='stylesheet' href='./Styles/reset.css' >
+            <link rel='stylesheet' href='./Styles/generic.css' >
             <link rel='stylesheet' href='./Styles/form.css' >
+            
+            
             <button class="collapsible" onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
             <div class='content' id='content'>
                 <h1 class='title' id='contentTitle'></h1>
