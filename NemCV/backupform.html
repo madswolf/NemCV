@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/generic.css">
+    <link rel="stylesheet" type="text/css" href="styles/form.css">
+
+    <script type="text/javascript" src="scripts/education_form.js" defer></script>
+
+    <title>Form</title>
+
+</head>
+    <body>
+
+    <section class="section">
+        <form>
+            <div class="container">
+                <h1>Info</h1>
+            
+                <label for="name"><b>Navn: </b></label>
+                <input type="text" placeholder="Anders Andersen" id="name" required>
+            
+                <label for="age"><b>Alder: </b></label>
+                <input type="number" placeholder="" id="age" required>
+            
+                <label for="email"><b>Email: </b></label>
+                <input type="email" placeholder="" id="email" required>
+            
+                <label for="city"><b>By: </b></label>
+                <input type="text" placeholder="" id="city">
+
+                <label for="pic"><b>Billede: </b></label>
+                <input type="text" placeholder="" id="pic">
+            </div>
+        </form>
+
+        <form onsubmit="createEducation(event)" id="education-form">
+            <div class="container">
+              <h2>Uddannelse</h2>
+          
+              <label for="edu-place"><b>Uddannelsessted: </b></label>
+              <input type="text" placeholder="lol" id="edu-place" required>
+          
+              <label for="edu-type"><b>Titel: </b></label>
+              <input type="text" placeholder="lol2" id="edu-type" required>
+          
+              <label for="edu-startyear"><b>Startår: </b></label>
+              <input type="number" placeholder="9999" id="edu-startyear" required>
+          
+              <label for="edu-endyear"><b>Slutår: </b></label>
+              <input type="number" placeholder="9999" id="edu-endyear">
+
+              <button class="btn">Tilføj</button>
+              <button class="btn">Annuller</button>
+            </div>
+        </form>
+        <ul id="education-list">
+        </ul>
+
+        <form>
+            <div class="container">
+              <h1>Erfaring</h1>
+          
+              <label for="work-place"><b>Arbejdssted: </b></label>
+              <input type="text" placeholder="lol3" id="work-place" required>
+          
+              <label for="work-type"><b>Stilling: </b></label>
+              <input type="text" placeholder="lol4" id="work-type" required>
+          
+              <label for="work-startyear"><b>Startår: </b></label>
+              <input type="number" placeholder="9999" id="work-startyear" required>
+          
+              <label for="work-endyear"><b>Slutår: </b></label>
+              <input type="number" placeholder="9999" id="work-endyear">
+
+              <button type="button" class="btn">Tilføj</button>
+              <button type="reset" class="btn">Annuller</button>
+            </div>
+        </form>
+
+        <form>
+              <div class="container">
+                <h1>Fritekst</h1>
+            
+                <input type="text" placeholder="lol7">
+  
+                <button type="button" class="btn">Tilføj</button>
+                <button type="reset" class="btn">Annuller</button>
+              </div>
+
+          </form>
+
+    </section>
+    </body>
+</html>
