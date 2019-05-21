@@ -1,41 +1,56 @@
 
-educationList = [];
+eduList = [];
+workList = [];
 
-function createEducation(event){
+function createAccomplishment(event){
     console.log("Clicked");
     event.preventDefault();
-    const eduPlace = document.getElementById("edu-place").value;
-    const eduType = document.getElementById("edu-type").value;
-    const eduStartYear = document.getElementById("edu-startyear").value;
-    const eduEndYear = document.getElementById("edu-endyear").value;
+   
+    const formElement= document.getElementById(event.target.id);
+    let children = formElement.children;
+    const place = children[2].value;
+    const type = children[4].value;
+    const startYear = children[6].value;
+    const endYear = children[8].value;
 
-    const education = {
-        "name": eduPlace,
-        "title": eduType,
-        "from": eduStartYear,
-        "to": eduEndYear
+    const accomplishment = {
+        "name": place,
+        "title": type,
+        "from": startYear,
+        "to": endYear
     };
 
-    educationList.push(education);
-    updateEducationList();
-    document.getElementById("education-form").reset();
+    if(formElement.id.includes("work")){
+        workList.push(accomplishment);
+        updateList("work",workList);
+    }else {
+        eduList.push(accomplishment);
+        updateList("education", eduList);
+    }
+    
+    formElement.reset();
 }
 
-function updateEducationList(){
-    const ul = document.getElementById("education-list");
+function updateList(name, list){
+    const ul = document.getElementById(name + "-list");
+    let kind = "";
+    if(name == "work"){
+        kind = "Erfaring";
+    }else {
+        kind = "Uddannelse";
+    }
     ul.innerHTML = "";
 
     let counter = 0;
-    educationList.forEach(element => {
+    list.forEach(element => {
         const newList = document.createElement("LI");
-        const textNode = document.createTextNode("Sted: " +
-            element.place + " Title: " + element.type + " År: " +
-            element.start + " - " + element.end);
+        const textNode = document.createTextNode(
+            kind + ": " + element.name + ", " + element.title + " " + element.from + " - " + element.to);
 
         const button = document.createElement("button");
         button.innerHTML = "X";
-        button.setAttribute("id", "edu-delete-" + counter);
-        button.setAttribute("onclick", "deleteEducation(this.id)");
+        button.setAttribute("id", name + "-delete-" + counter);
+        button.setAttribute("onclick", "deleteListElement(this.id)",);
 
         newList.appendChild(textNode);
         newList.appendChild(button);
@@ -45,10 +60,16 @@ function updateEducationList(){
     })
 }
 
-function deleteEducation(id){
-    console.log(id);
-    educationList.splice(id.slice(11,12), 1);
-    updateEducationList();
+function deleteListElement(id){
+    if(id.includes("work")){
+        workList.splice(id.slice(11,12), 1);
+        updateList("work", workList);
+    } else{
+        eduList.splice(id.slice(11,12), 1);
+        updateList("education", eduList);
+    }
+    
+    
 }
 
 

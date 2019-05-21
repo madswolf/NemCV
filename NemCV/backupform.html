@@ -19,7 +19,7 @@
     <section class="section">
         <form>
             <div class="container">
-                <h1>Info</h1>
+                <h2>Info</h2>
             
                 <label for="name"><b>Navn: </b></label>
                 <input type="text" placeholder="Anders Andersen" id="name" required>
@@ -35,11 +35,12 @@
 
                 <label for="pic"><b>Billede: </b></label>
                 <input type="text" placeholder="" id="pic">
+                <button class="btn">GEM</button>
+                <button class="btn">ANNULER</button>
             </div>
         </form>
 
-        <form onsubmit="createEducation(event)" id="education-form">
-            <div class="container">
+        <form onsubmit="createAccomplishment(event)" id="education-form">
               <h2>Uddannelse</h2>
           
               <label for="edu-place"><b>Uddannelsessted: </b></label>
@@ -54,16 +55,14 @@
               <label for="edu-endyear"><b>Slutår: </b></label>
               <input type="number" placeholder="9999" id="edu-endyear">
 
-              <button class="btn">Tilføj</button>
-              <button class="btn">Annuller</button>
-            </div>
+              <button class="btn">TILFØJ</button>
+              <button class="btn">ANNULER</button>
         </form>
-        <ul id="education-list">
-        </ul>
+              <ul id="education-list">
+              </ul>
 
-        <form>
-            <div class="container">
-              <h1>Erfaring</h1>
+        <form onsubmit="createAccomplishment(event)" id="work-form">
+              <h2>Erfaring</h2>
           
               <label for="work-place"><b>Arbejdssted: </b></label>
               <input type="text" placeholder="lol3" id="work-place" required>
@@ -77,19 +76,20 @@
               <label for="work-endyear"><b>Slutår: </b></label>
               <input type="number" placeholder="9999" id="work-endyear">
 
-              <button type="button" class="btn">Tilføj</button>
-              <button type="reset" class="btn">Annuller</button>
-            </div>
+              <button class="btn">TILFØJ</button>
+              <button class="btn">ANNULER</button>   
         </form>
+              <ul id="work-list">
+              </ul>
 
         <form>
               <div class="container">
-                <h1>Fritekst</h1>
+                <h2>Fritekst</h2>
             
                 <input type="text" placeholder="lol7">
   
-                <button type="button" class="btn">Tilføj</button>
-                <button type="reset" class="btn">Annuller</button>
+                <button type="button" class="btn">GEM</button>
+                <button type="reset" class="btn">ANNULLER</button>
               </div>
 
           </form>
