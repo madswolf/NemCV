@@ -4,9 +4,9 @@ class FormWebcomponent extends HTMLElement {
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
             <link rel='stylesheet' href='./Styles/form.css' >
-            <button class='collapsible'  onclick='showContent(this)' id='button'><slot name='title' class='title'></slot></button>
+            <button class="collapsible" onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
             <div class='content' id='content'>
-                <h1 class='title'></h1>
+                <h1 class='title' id='contentTitle'></h1>
                 <slot name='form'></slot>
                 <slot name='add-button'></slot>
                 <button onclick='dontShowContent(this)'>OK</button>
@@ -19,19 +19,34 @@ class FormWebcomponent extends HTMLElement {
 customElements.define('form-component', FormWebcomponent);
 const element = document.createElement("form-component");
 
+function getShadowRoot(element) {
+    console.log(element);
+    console.log(FormWebcomponent.shadowRoot);
+    if(element.parentNode === FormWebcomponent){
+        return element.parentNode;
+    }else{
+        getShadowRoot(element.parentNode);
+    }
+}
+
 function showContent(collapsible) {
-    let content = collapsible.nextElementSibling;
-    let title = collapsible.firstElementChild.textContent;
-    console.log(collapsible.getElementsByClassName("title"));
-
-
+    console.log(collapsible.parentNode);
+    let shadowRoot = collapsible.parentNode;
+    let content = shadowRoot.getElementById("content");
+    let title = shadowRoot.getElementById("title").assignedElements()[0];
+    let contentTitle = shadowRoot.getElementById("contentTitle");
+    contentTitle.textContent = title.textContent;
     collapsible.style.display = "none";
     content.style.display = "block";
     content.style.height = "100%";
 }
 
 function dontShowContent(goBackButton) {
-    var parent = goBackButton.parentElement;
-    parent.style.display = "none";
-    parent.previousElementSibling.style.display = "block";
+    console.log(goBackButton.parentElement.parentNode);
+    var shadowRoot = goBackButton.parentElement.parentNode;
+    var collapsible = shadowRoot.getElementById("collapsible");
+    var content = shadowRoot.getElementById("content");
+    content.style.display = "none";
+    collapsible.style.display = "block";
 }
+

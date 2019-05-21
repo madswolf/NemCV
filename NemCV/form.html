@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Styles/reset.css">
     <link rel="stylesheet" href="Styles/variables.css">
     <script src="Scripts/form_webcomponent.js"></script>
+    <script src="Scripts/OneDialog.js"></script>
     <link rel="stylesheet" href="Styles/generic.css">
     <link rel="stylesheet" type="text/css" href="Styles/form.css">
 
@@ -14,12 +15,18 @@
 </head>
     <body>
     <h1>hej</h1>
+
     <form-component>
         <h1 slot="title">Uddannelse</h1>
         <form slot="form">
             <input type="text">
         </form>
     </form-component>
-    <form-component></form-component>
+    <form-component>
+        <h1 slot="title">Erfaring</h1>
+        <form slot="form">
+            <input type="text">
+        </form>
+    </form-component>
     </body>
 </html>
