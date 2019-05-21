@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="styles/form.css">
 
     <script type="text/javascript" src="scripts/education_form.js" defer></script>
+    <script type="text/javascript" src="scripts/api.js" defer></script>
 
     <title>Form</title>
 
@@ -92,6 +93,18 @@
               </div>
 
           </form>
+
+        <form>
+            <h1>Sectors</h1>
+            <div class="container">
+                <label for="sectors">Sectors:</label>
+                <select name="Sectors" id="sectors" disabled>
+                    <option selected disabled>Loading...</option>
+                </select>
+            </div>
+        </form>
+
+        <button onclick="createCvForValidation()">TEST SEND API</button>
 
     </section>
     </body>

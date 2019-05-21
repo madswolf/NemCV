@@ -29,6 +29,8 @@ function populateDropdown() {
     select.disabled = false;
 }
 
+getSectors();
+
 function dropdownError(){
     const select = document.getElementById("sectors");
     select.remove(0);
@@ -38,7 +40,44 @@ function dropdownError(){
     select.add(el);
 }
 
+function createCvForValidation(){
+
+    const education = educationList;
+
+    const sectors = [];
+    sectors.push("Transport");
+    sectors.push("Kultur og fritid");
+
+
+
+    const cv = {"name": "Hest McHestert",
+        "age": 34,
+        "email": "hest@hestenettet.dk",
+        "city": "Hestved",
+        "picture": "http://hest.com/hest.jpg",
+        "description": "Håber jeg finder det fede arbejde",
+        "employers":[
+            {
+                "name": "Google",
+                "title": "Pedel",
+                "from": "2012"
+            },
+            {
+                "name": "Stalden",
+                "title": "Vallak",
+                "from": "2007-01-01",
+                "to": "2012-03-01"
+            }
+        ], education, sectors};
+
+    validateCV(cv);
+
+    console.log(JSON.stringify(cv));
+
+}
+
 function testCVValidation(){
+    console.log(educationList);
     const cv = {
         "name": "Hest McHestert",
         "age": 34,

@@ -10,10 +10,10 @@ function createEducation(event){
     const eduEndYear = document.getElementById("edu-endyear").value;
 
     const education = {
-        "place": eduPlace,
-        "type": eduType,
-        "start": eduStartYear,
-        "end": eduEndYear
+        "name": eduPlace,
+        "title": eduType,
+        "from": eduStartYear,
+        "to": eduEndYear
     };
 
     educationList.push(education);
