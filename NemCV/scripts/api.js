@@ -117,14 +117,12 @@ async function validateCV(cv){
         body: JSON.stringify(cv),
         headers:{
             "content-type": "application/json"
-        }}).then(function(response){
+        }}).then((response) => {
             if(response.ok === true){
                 alert("CV  modtaget")
             } else{
                 alert(response.json())
             }
-
-            alert(response.status);
     });
 
 }
