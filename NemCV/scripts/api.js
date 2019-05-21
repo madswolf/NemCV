@@ -42,7 +42,7 @@ function dropdownError(){
 
 function createCvForValidation(){
 
-    const education = educationList;
+    const education = eduList;
 
     const sectors = [];
     sectors.push("Transport");
@@ -77,7 +77,6 @@ function createCvForValidation(){
 }
 
 function testCVValidation(){
-    console.log(educationList);
     const cv = {
         "name": "Hest McHestert",
         "age": 34,
