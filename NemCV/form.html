@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/form.css">
 
     <script src="scripts/form_webcomponent.js"></script>
-    <script type="text/javascript" src="scripts/education_form.js" defer></script>
+    <!--<script type="text/javascript" src="scripts/education_form.js" defer></script>-->
     <script type="text/javascript" src="scripts/info_form.js" defer></script>
     <script type="text/javascript" src="scripts/sector.js" defer></script>
     <script type="text/javascript" src="scripts/api.js" defer></script>
@@ -40,6 +40,7 @@
             <button class="btn">ANNULLER</button>
         </form>
     </form-component>
+
     <form-component>
         <h1 slot="title">Uddannelse</h1>
         <form slot="form" onsubmit="createAccomplishment(event)" id="education-form">
@@ -59,10 +60,12 @@
             <button class="btn">ANNULLER</button>
         </form>
     </form-component>
+    <ul id="education-list">
+    </ul>
+
     <form-component>
         <h1 slot="title">Erfaring</h1>
         <form slot="form" onsubmit="createAccomplishment(event)" id="work-form">
-            <h2>Erfaring</h2>
 
             <label for="work-place"><b>Arbejdssted: </b></label>
             <input type="text" placeholder="" id="work-place" required>
@@ -79,7 +82,37 @@
             <button class="btn">TILFØJ</button>
             <button class="btn">ANNULLER</button>
         </form>
+            
     </form-component>
+    <ul id="work-list">
+    </ul>
+
+    <form-component>
+        <h1 slot="title">Fritekst</h1>
+        <form slot="form" onsubmit="getUserDescription(event)" id="description-form">
+        
+            <input type="text" placeholder="">
+
+            <button class="btn">GEM</button>
+            <button class="btn">ANNULLER</button>
+        </form>
+    </form-component>
+
+    <form-component>
+        <h1 slot="title">Sektorer</h1>
+        <form slot="form" onsubmit="addSector(event)" id="sector-form">
+        
+            <label for="sectors">Sektorer (maks 3):</label>
+            <select name="Sectors" id="sectors" disabled>
+                <option selected disabled>Loading...</option>
+            </select>
+        
+            <button class="btn">TILFØJ</button>
+        </form>
+    </form-component>
+    <ul id="sector-list">
+    </ul>
+
     </body>
 <body>
 <h1>hej</h1>
