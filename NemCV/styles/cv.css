@@ -17,6 +17,7 @@ body {
 .content {
     margin: auto;
     background-color: white;
+    padding: 10px;
 }
 
 /*----------------------------------------------------------------------------*\
@@ -25,7 +26,9 @@ body {
 
 \*----------------------------------------------------------------------------*/
 
-
+p {
+    margin: 10px;
+}
 
 
 /*----------------------------------------------------------------------------*\
@@ -41,9 +44,10 @@ body {
     margin-bottom: 5px;
 }
 
-.icon{
+.icon {
   height: 25px;
   width: 25px;
+  margin-right: 5px;
 
 }
 
@@ -78,6 +82,7 @@ line{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .columns .column-head .row1, .columns .column-head .row2 {
@@ -136,11 +141,11 @@ line{
         justify-content: space-between;
     }
 
-    .columns .column-head .row1 .item , .columns .column-head .row2 .item {
-        width: 100%;
-    }
-
     .border{
       border-left: none;
+    }
+
+    .columns .column-head .row1 .item , .columns .column-head .row2 .item {
+        width: 100%;
     }
 }
