@@ -10,19 +10,35 @@
 body {
     width: 100%;
     background-color: rgb(27,29,30, 0.5);
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin: auto;
+    height: auto;
 }
 
+section {
+    margin-top: 10px;
+}
 
 .content {
     margin: auto;
     background-color: white;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(27,29,30, 0.5);
+    width: 80%;
+}
+
+.picture-container {
+    margin: auto;
+    width: 60%;
+    height: 30%;
 }
 
 .CV-picture {
-    width: 40%;
-    height: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
 
 /*----------------------------------------------------------------------------*\
@@ -32,7 +48,9 @@ body {
 \*----------------------------------------------------------------------------*/
 
 p {
-    margin: 10px;
+    margin: 20px;
+    color: black;
+    font-size: 100%;
 }
 
 
@@ -46,14 +64,13 @@ p {
 .flex-icongrafics {
     display: flex;
     height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .icon {
-  height: 25px;
-  width: 25px;
+  height: 150%;
+  width: auto;
   margin-right: 5px;
-
 }
 
 
