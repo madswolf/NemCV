@@ -1,7 +1,6 @@
 /*                                      *\
 \*           INPUT-HANDLING             */
 
-
 let info = {};
 let description = {};
 
@@ -12,32 +11,57 @@ function getUserInfo(event){
     const formElement = shadowRoot.host.children[1];
 
     const children = formElement.children;
-    const name    = children[1].value;
-    const age     = children[3].value;
-    const email   = children[5].value;
-    const city    = children[7].value;
-    const picture = children[9].value;
+    const name    = children[1];
+    const age     = children[3];
+    const email   = children[5];
+    const city    = children[7];
+    const picture = children[9];
 
-    info = {name, age, email, city, picture};
+    info = { name, age, email, city, picture };
 
+    updateUserInfo();
+}
+
+
+function updateUserInfo(){
+    const ul = document.getElementById("info");
     console.log(info);
+    for(let i = 0; i < info.length; i++) {
+        const li = document.createElement("LI");
+        const textNode = document.createTextNode(info[i].labels[0] + info[i].text);
+        li.appendChild(textNode);
+        ul.appendChild(li);
+    }
+
+    const button = document.createElement("button");
+    button.innerHTML = "X";
+    button.setAttribute("id", "info-delete");
+    button.setAttribute("onclick", "deleteInfo(this.id)");
+
+    ul.appendChild(button);
+    
+}
+
+function deleteInfo(id){
+    info = {};
+    btn = document.getElementById(id);
+    btn.parentNode.removeChild(btn);
+    updateUserInfo();
 }
 
 function getUserDescription(event) {
     event.preventDefault();
-    const formElement = document.getElementById(event.target.id);
-    const children  = formElement.children;
-    description =  children[1].value;
+    const shadowRoot  = event.target.parentNode.getShadowRoot();
+    const formElement = shadowRoot.host.children[1];
+    description =  formElement.children[0].value;
 
     console.log(description);
 }
 
-
-
 let eduList = [];
 let workList = [];
 let sectorList = [];
-
+let selectedSectors = [];
 
 function getList(id) {
          if( id.includes("education") ) { return eduList;    }
@@ -50,7 +74,7 @@ function getList(id) {
 function createAccomplishment(event){
     event.preventDefault();
    
-    const shadowRoot = event.target.parentNode.getShadowRoot();
+    const shadowRoot = event.target.parentNode.shadowRoot;
     const formElement = shadowRoot.host.children[1];
     const children  = formElement.children;
     const   place   =  children[1].value;
@@ -83,8 +107,9 @@ function addSector(event){
     const shadowRoot = event.target.parentNode.getShadowRoot();
     const sectorDropDown = shadowRoot.host.children[1].children[1];
     const selected = sectorDropDown.options[sectorDropDown.selectedIndex];
-    sectorList.push(selected);
+    sectorList.push(selected.text);
     selected.disabled = true;
+    selectedSectors.push(selected);
     
     updateList(sectorList);
 }
@@ -92,9 +117,14 @@ function addSector(event){
 
 function deleteListElement(id){
     const list = getList(id);
-    const removed = list.splice(id.slice(id.lastIndexOf("-"),id.lastIndexOf("-")+1), 1 );
-    if(list == sectorList){ removed[0].disabled = false; }
-
+    const index = id.slice(-1);
+    list.splice(id.slice(-1), 1 );
+    if(list == sectorList){ 
+        deletedSector = selectedSectors[index];
+        deletedSector.disabled = false;
+        selectedSectors.splice(index,1);
+    }
+    
     updateList(list);
 }
 
@@ -123,7 +153,7 @@ function updateList(list){
         const newList = document.createElement("LI");
         let textNode = undefined;
         if(list == sectorList){
-            textNode = document.createTextNode(element.text)
+            textNode = document.createTextNode(element)
         }else {
             textNode = document.createTextNode(
             kind + ": " + element.name + ", " + element.title 
