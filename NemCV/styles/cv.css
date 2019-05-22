@@ -63,12 +63,12 @@ p {
 
 .flex-icongrafics {
     display: flex;
-    height: 20px;
+    height: 40px;
     margin-bottom: 10px;
 }
 
 .icon {
-  height: 150%;
+  height: 120%;
   width: auto;
   margin-right: 5px;
 }
