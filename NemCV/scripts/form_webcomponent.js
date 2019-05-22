@@ -4,7 +4,6 @@ class FormWebcomponent extends HTMLElement {
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
             <link rel='stylesheet' href='./Styles/reset.css' >
-            <link rel='stylesheet' href='./Styles/generic.css' >
             <link rel='stylesheet' href='./Styles/form.css' >
             
             

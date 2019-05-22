@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="styles/generic.css">
         <link rel="stylesheet" type="text/css" href="styles/index.css">
 
+        <script src="scripts/input_webcomponent.js"></script>
+
         <title>nemCV</title>
     </head>
 
@@ -54,7 +56,28 @@
 
     <section class="section" id="section3">
         <h1>Hello 3 My Homie </h1>
-        <button onclick="window.location.href='form.html';">Kom igang</button>
+        <button class="button-primary" onclick="window.location.href='form.html';">Kom</button>
+        <div class="border">
+            <p class="header"><span class="header-background"> TITLE </span></p>
+        <input class="center" type="text" placeholder="" id="edu-place" required>
+        </div>
+
+        <input-component>
+            <span slot="hint">Hej med dig</span>
+        </input-component>
+
+        <input-component>
+            <span slot="hint">Hej med dig</span>
+        </input-component>
+
+        <input-component>
+            <span slot="hint">Hej med dig</span>
+        </input-component>
+
+        <input-component>
+            <span slot="hint">Hej med dig</span>
+        </input-component>
+
     </section>
 
     <script type="text/javascript" src="index.js"></script>

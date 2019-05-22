@@ -45,3 +45,60 @@ p{
     font-weight: var(--bodytext-font-weight) ;
     letter-spacing: var(--bodytext-letter-spaceing);
 }
+
+button{
+    font-family: var(--headline-large);
+    font-weight: var(--headline-large-font-weight) ;
+    letter-spacing: var(--headline-large-letter-spaceing);
+    color: var(--secondary-secondary-color);
+    font-size: var(--bodytext-size);
+    text-transform: uppercase;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 50px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+button:hover{
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+button:focus {
+    outline: 0;
+}
+
+.button-primary{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button-primary:hover{
+    background-color: rgba(55, 0, 179, 0.5);
+}
+
+.button-small{
+    min-width: 120px;
+}
+
+input{
+    background-color: transparent;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 300px;
+    color: var(--primary-color);
+}
+
+input:focus{
+    outline: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+.input-number{
+    width: 75px;
+}
+

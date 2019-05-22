@@ -13,6 +13,7 @@
     <script type="text/javascript" src="scripts/info_form.js" defer></script>
     <script type="text/javascript" src="scripts/sector.js" defer></script>
     <script type="text/javascript" src="scripts/api.js" defer></script>
+    <script src="scripts/input_webcomponent.js"></script>
 
     <title>Form</title>
 </head>
@@ -20,23 +21,34 @@
     <h1>hej</h1>
     <form-component>
         <h1 slot="title">Info</h1>
-        <form slot="form" onsubmit="getUserInfo(event)" id="info-form">
-            <label for="name"><b>Navn: </b></label>
-            <input type="text" placeholder="Anders Andersen" id="name" required>
+        <form autocomplete="off" slot="form" onsubmit="getUserInfo(event)" id="info-form">
+            <input-component>
+                <span slot="hint">Navn</span>
+                <input slot="input" type="text" required>
+            </input-component>
 
-            <label for="age"><b>Alder: </b></label>
-            <input type="number" placeholder="" id="age" required>
+            <input-component>
+                <span slot="hint">Alder</span>
+                <input class="input-number" slot="input" type="number" required>
+            </input-component>
 
-            <label for="email"><b>Email: </b></label>
-            <input type="email" placeholder="" id="email" required>
+            <input-component>
+                <span slot="hint">Email</span>
+                <input slot="input" type="text" required>
+            </input-component>
 
-            <label for="city"><b>By: </b></label>
-            <input type="text" placeholder="" id="city">
+            <input-component>
+                <span slot="hint">By</span>
+                <input slot="input" type="text" required>
+            </input-component>
 
-            <label for="pic"><b>Billede: </b></label>
-            <input type="text" placeholder="" id="pic">
-            <button class="btn">GEM</button>
-            <button class="btn">ANNULLER</button>
+            <input-component>
+                <span slot="hint">Billede URL</span>
+                <input slot="input" type="text" required>
+            </input-component>
+
+            <button class="button-primary button-small">GEM</button>
+            <button class="button-primary button-small">ANNULLER</button>
         </form>
     </form-component>
 
