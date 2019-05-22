@@ -37,13 +37,14 @@ body {
 
 .flex-icongrafics {
     display: flex;
-    justify-content: space-between;
     height: 20px;
+    margin-bottom: 5px;
 }
 
 .icon{
   height: 25px;
   width: 25px;
+
 }
 
 
@@ -113,12 +114,11 @@ line{
 
 \*----------------------------------------------------------------------------*/
 
-ul {
+.info {
   list-style-type: none;
   margin-left: 20px;
 
 }
-
 
 /*----------------------------------------------------------------------------*\
 
