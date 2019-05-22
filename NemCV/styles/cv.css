@@ -1,4 +1,12 @@
 
+
+/*----------------------------------------------------------------------------*\
+
+#CONTENT
+
+\*----------------------------------------------------------------------------*/
+
+
 body {
     width: 100%;
     background-color: rgb(27,29,30, 0.5);
@@ -11,38 +19,60 @@ body {
     background-color: white;
 }
 
+/*----------------------------------------------------------------------------*\
+
+#TYPEOGRAFY
+
+\*----------------------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------------------------*\
+
+#ICONS
+
+\*----------------------------------------------------------------------------*/
+
 
 .flex-icongrafics {
     display: flex;
     justify-content: space-between;
     height: 20px;
-
 }
 
-line{
-stroke:rgb(0,0,0);
-stroke-width:2;
-
+.icon{
+  height: 25px;
+  width: 25px;
 }
+
+
+/*----------------------------------------------------------------------------*\
+
+#SVG
+
+\*----------------------------------------------------------------------------*/
+
+
 
 .svg-line {
     padding: 0;
     margin: 0;
     color: black;
-    height: 20px;
-}
-.svg-line-head-flex {
-  display: flex;
-  width: 10px;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  padding-right: 2px;
-  margin: 0;
+    margin-top: 10px;
 }
 
+line{
+  stroke: black;
+  stroke-width: 0.5px;
+}
 
-/* Content positionering*/
+/*----------------------------------------------------------------------------*\
+
+#CONTENT POSITIONING
+
+\*----------------------------------------------------------------------------*/
+
 .columns {
     display: flex;
     flex-direction: column;
@@ -62,25 +92,55 @@ stroke-width:2;
     justify-content: center;
 }
 
+.columns .column-head .row2 .item .sector-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
 .columns .columns-bottom {
-    width: 80%;
+    width: 100%;
 }
 
 
 .border{
   border-left: 1px solid black;
 }
+/*----------------------------------------------------------------------------*\
 
-@media only screen and (max-width: 600px) {
+#LIST
+
+\*----------------------------------------------------------------------------*/
+
+ul {
+  list-style-type: none;
+  margin-left: 20px;
+
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+#MEDIA QUERY
+
+\*----------------------------------------------------------------------------*/
+
+
+
+@media only screen and (max-width: 700px) {
 
     .columns .column-head .row1, .columns .column-head .row2 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
+    .columns .column-head .row1 .item , .columns .column-head .row2 .item {
+        width: 100%;
+    }
+
     .border{
       border-left: none;
     }
-
-
 }
