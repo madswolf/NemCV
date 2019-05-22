@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/generic.css">
-    <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <title>nemCV</title>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/variables.css">
+        <link rel="stylesheet" href="styles/generic.css">
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
 
-</head>
+        <title>nemCV</title>
+    </head>
 
-<body>
+    <body>
 
     <nav class="nav">
         <ul>
-            <li><button class="item" id="nav-section1" onclick="onProgressBarClick(this.id)"></button></li>
-            <li><button class="item" id="nav-section2" onclick="onProgressBarClick(this.id)"></button></li>
-            <li><button class="item" id="nav-section3" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
         </ul>
     </nav>
 
-    <section class="section blue section1" id="section1">
+
+    <section class="section " id="section1">
+
         <img class="banner" src="resources/banner.png" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
 
         <select name="Sectors" id="sectors" disabled>
@@ -29,31 +31,35 @@
 
         <button onclick="testCVValidation()">TEST SEND API</button>
 
-    <ul class="sellings-points">
-        <li class="selling-point">
-            Bæ
-        </li>
-        <li class="selling-point">
-            Orm
-        </li>
-        <li class="selling-point">
-            Gris
-        </li>
-    </ul>
+        <ul class="sellings-points">
+            <li class="selling-point">
+                <img src="resources/suitcase_and_heart.png">
+                <p> Lorem assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+            </li>
+            <li class="selling-point">
+                <img src="resources/star.png">
+                <p> Lorem assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+            </li>
+            <li class="selling-point">
+                <img src="resources/light_bulb.png">
+                <p> Lorem assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
+            </li>
+        </ul>
 
-</section>
+    </section>
 
-<section class="section" id="section2">
-    <h1>Hello 2 My Friend </h1>
-</section>
+    <section class="section" id="section2">
+        <h1>Hello 2 My Friend </h1>
+    </section>
 
-<section class="section" id="section3">
-    <h1>Hello 3 My Homie </h1>
-    <button onclick="window.location.href='form.html';">Kom igang</button>
-</section>
+    <section class="section" id="section3">
+        <h1>Hello 3 My Homie </h1>
+        <button onclick="window.location.href='form.html';">Kom igang</button>
+    </section>
 
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="scripts/api.js"></script>
-</body>
+
+    </body>
 
 </html>

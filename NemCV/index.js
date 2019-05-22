@@ -8,6 +8,11 @@ function scrollToElement(elementName){
     console.log(elementName);
     const element = document.getElementById(elementName);
     element.scrollIntoView({behavior: "smooth"});
+
+
+
+
+
 }
 
 const allElements = document.getElementsByClassName("section");
