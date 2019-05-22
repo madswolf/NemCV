@@ -1,0 +1,86 @@
+
+body {
+    width: 100%;
+    background-color: rgb(27,29,30, 0.5);
+    margin: auto;
+}
+
+
+.content {
+    margin: auto;
+    background-color: white;
+}
+
+
+.flex-icongrafics {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+
+}
+
+line{
+stroke:rgb(0,0,0);
+stroke-width:2;
+
+}
+
+.svg-line {
+    padding: 0;
+    margin: 0;
+    color: black;
+    height: 20px;
+}
+.svg-line-head-flex {
+  display: flex;
+  width: 10px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2px;
+  margin: 0;
+}
+
+
+/* Content positionering*/
+.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.columns .column-head .row1, .columns .column-head .row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.columns .column-head .row1 .item , .columns .column-head .row2 .item {
+    width: 50%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns .columns-bottom {
+    width: 80%;
+}
+
+
+.border{
+  border-left: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .columns .column-head .row1, .columns .column-head .row2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .border{
+      border-left: none;
+    }
+
+
+}
