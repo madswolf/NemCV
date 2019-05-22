@@ -66,12 +66,20 @@ stroke-width:2;
     width: 80%;
 }
 
+
+.border{
+  border-left: 1px solid black;
+}
+
 @media only screen and (max-width: 600px) {
 
     .columns .column-head .row1, .columns .column-head .row2 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .border{
+      border-left: none;
     }
 
 
