@@ -74,6 +74,8 @@ class FormWebcomponent extends HTMLElement {
 
 customElements.define('form-component', FormWebcomponent);
 
+/*                                   *\
+\*             BEHAVIOUR             */
 
 function showContent(collapsible) {
     let shadowRoot = collapsible.parentNode;

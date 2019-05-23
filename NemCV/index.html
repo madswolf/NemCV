@@ -15,7 +15,7 @@
     <body>
 
     <nav class="nav">
-        <ul>
+        <ul class="progressbar">
             <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
             <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
             <li><button class="item" onclick="onProgressBarClick(this.id)"></button></li>
@@ -27,12 +27,8 @@
 
         <img class="banner" src="resources/banner.png" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
 
-        <select name="Sectors" id="sectors" disabled>
-            <option selected disabled>Loading...</option>
-        </select>
 
-        <button onclick="testCVValidation()">TEST SEND API</button>
-
+        <div>
         <ul class="sellings-points">
             <li class="selling-point">
                 <img src="resources/suitcase_and_heart.png">
@@ -47,36 +43,26 @@
                 <p> Lorem assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!</p>
             </li>
         </ul>
+      </div>
+    </section>
+
+    <section class=" section2 " id="section2">
+        <h1>Eksempel CV </h1>
+        <figure class="cv-example">
+          <img src="resources/eksempelCV.PNG" >
+
+        </figure>
 
     </section>
 
-    <section class="section" id="section2">
-        <h1>Hello 2 My Friend </h1>
-    </section>
-
-    <section class="section" id="section3">
+    <section class="section section3" id="section3">
         <h1>Hello 3 My Homie </h1>
-        <button class="button-primary" onclick="window.location.href='form.html';">Kom</button>
-        <div class="border">
-            <p class="header"><span class="header-background"> TITLE </span></p>
-        <input class="center" type="text" placeholder="" id="edu-place" required>
+
+        <div class="centered-button-box">
+            <button class="centered-button" onclick="window.location.href='form.html';">
+              Kom igang
+            </button>
         </div>
-
-        <input-component>
-            <span slot="hint">Hej med dig</span>
-        </input-component>
-
-        <input-component>
-            <span slot="hint">Hej med dig</span>
-        </input-component>
-
-        <input-component>
-            <span slot="hint">Hej med dig</span>
-        </input-component>
-
-        <input-component>
-            <span slot="hint">Hej med dig</span>
-        </input-component>
 
     </section>
 
