@@ -1,4 +1,7 @@
 class InputWebComponent extends HTMLElement{
+
+
+
     constructor(){
         super();
         let shadowRoot = this.attachShadow({mode: 'open'});
@@ -24,16 +27,11 @@ class InputWebComponent extends HTMLElement{
                 .div-border{
                     border: 2px solid var(--primary-color);
                     border-radius: 5px;
-                    margin-left: auto;
-                    margin-right: auto;
                     padding-left: 5px;
                     padding-right: 5px;
-                    display:inline-block
+                    display: inline-block;
+                    margin-bottom: 10px;
                 } 
-                
-                .div-outside{
-                    padding: 10px;
-                }
                 
                 input{
                     background-color: transparent;
@@ -52,18 +50,22 @@ class InputWebComponent extends HTMLElement{
                     color: var(--primary-color);
                 }
             </style>
-            <div class="div-outside">
                 <div class="div-border">
                     <p><span><slot name="hint"></slot></span></p>
-                    <slot name="input"></slot>
-                </div>
-            </div>`;
+                    <slot name="input" id="input"></slot>
+                </div>`;
     }
 
-
-
+    value(){
+        const shadowRoot = this.shadowRoot;
+        const inputNode = shadowRoot.getElementById("input");
+        return inputNode.assignedElements()[0].value;
+    }
 
 
 
 }
 customElements.define('input-component', InputWebComponent);
+
+
+

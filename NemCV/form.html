@@ -17,112 +17,144 @@
 
     <title>Form</title>
 </head>
-    <body>
-    <h1>hej</h1>
-    <form-component>
-        <h1 slot="title">Info</h1>
-        <form autocomplete="off" slot="form" onsubmit="getUserInfo(event)" id="info-form">
-            <input-component>
-                <span slot="hint">Navn</span>
-                <input slot="input" type="text" required>
-            </input-component>
+<body>
 
-            <input-component>
-                <span slot="hint">Alder</span>
-                <input class="input-number" slot="input" type="number" required>
-            </input-component>
+<ul class="center-content">
+    <li>
+    <h1>Udfyld kategorierne</h1>
+    </li>
+    <li>
+        <form-component>
+            <h1 slot="title">Info</h1>
+            <form autocomplete="off" slot="form" onsubmit="getUserInfo(event)" id="info-form">
+                <input-component>
+                    <span slot="hint">Navn</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-            <input-component>
-                <span slot="hint">Email</span>
-                <input slot="input" type="text" required>
-            </input-component>
+                <input-component>
+                    <span slot="hint">Alder</span>
+                    <input class="input-number" slot="input" type="number" required>
+                </input-component>
 
-            <input-component>
-                <span slot="hint">By</span>
-                <input slot="input" type="text" required>
-            </input-component>
+                <input-component>
+                    <span slot="hint">Email</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-            <input-component>
-                <span slot="hint">Billede URL</span>
-                <input slot="input" type="text" required>
-            </input-component>
+                <input-component>
+                    <span slot="hint">By</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-            <button class="button-primary button-small">GEM</button>
-            <button class="button-primary button-small">ANNULLER</button>
-        </form>
-    </form-component>
+                <input-component>
+                    <span slot="hint">Billede URL</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-    <form-component>
-        <h1 slot="title">Uddannelse</h1>
-        <form slot="form" onsubmit="createAccomplishment(event)" id="education-form">
-            <label for="edu-place"><b>Uddannelsessted: </b></label>
-            <input type="text" placeholder="" id="edu-place" required>
+                <div>
+                    <button class="button-primary button-small">GEM</button>
+                    <button class="button-primary button-small">ANNULLER</button>
+                </div>
+            </form>
 
-            <label for="edu-type"><b>Titel: </b></label>
-            <input type="text" placeholder="" id="edu-type" required>
+        </form-component>
+    </li>
 
-            <label for="edu-startyear"><b>Startår: </b></label>
-            <input type="number" placeholder="9999" id="edu-startyear" required>
+    <li>
 
-            <label for="edu-endyear"><b>Slutår: </b></label>
-            <input type="number" placeholder="9999" id="edu-endyear">
+        <form-component>
+            <h1 slot="title">Uddannelse</h1>
+            <form slot="form" onsubmit="createAccomplishment(event)" id="education-form">
 
-            <button class="btn">TILFØJ</button>
-            <button class="btn">ANNULLER</button>
-        </form>
-    </form-component>
-    <ul id="education-list">
-    </ul>
+                <input-component>
+                    <span slot="hint">Uddannelsessted</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-    <form-component>
-        <h1 slot="title">Erfaring</h1>
-        <form slot="form" onsubmit="createAccomplishment(event)" id="work-form">
+                <input-component>
+                    <span slot="hint">Title</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-            <label for="work-place"><b>Arbejdssted: </b></label>
-            <input type="text" placeholder="" id="work-place" required>
+                <input-component>
+                    <span slot="hint">Start år</span>
+                    <input class="input-number" slot="input" type="number" required>
+                </input-component>
 
-            <label for="work-type"><b>Stilling: </b></label>
-            <input type="text" placeholder="" id="work-type" required>
+                <input-component>
+                    <span slot="hint">Slut år</span>
+                    <input class="input-number" slot="input" type="number" required>
+                </input-component>
 
-            <label for="work-startyear"><b>Startår: </b></label>
-            <input type="number" placeholder="9999" id="work-startyear" required>
+                <button class="button-primary">TILFØJ</button>
+                <button class="button-primary">ANNULLER</button>
+            </form>
+        </form-component>
+        <ul id="education-list">
+        </ul>
+    </li>
 
-            <label for="work-endyear"><b>Slutår: </b></label>
-            <input type="number" placeholder="9999" id="work-endyear">
+    <li>
+        <form-component>
+            <h1 slot="title">Erfaring</h1>
+            <form slot="form" onsubmit="createAccomplishment(event)" id="work-form">
 
-            <button class="btn">TILFØJ</button>
-            <button class="btn">ANNULLER</button>
-        </form>
-            
-    </form-component>
-    <ul id="work-list">
-    </ul>
+                <input-component>
+                    <span slot="hint">Arbejdssted</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-    <form-component>
-        <h1 slot="title">Fritekst</h1>
-        <form slot="form" onsubmit="getUserDescription(event)" id="description-form">
-        
-            <input type="text" placeholder="">
+                <input-component>
+                    <span slot="hint">Stilling</span>
+                    <input slot="input" type="text" required>
+                </input-component>
 
-            <button class="btn">GEM</button>
-            <button class="btn">ANNULLER</button>
-        </form>
-    </form-component>
+                <input-component>
+                    <span slot="hint">Start år</span>
+                    <input class="input-number" slot="input" type="number" required>
+                </input-component>
 
-    <form-component>
-        <h1 slot="title">Sektorer</h1>
-        <form slot="form" onsubmit="addSector(event)" id="sector-form">
-        
-            <label for="sectors">Sektorer (maks 3):</label>
-            <select name="Sectors" id="sectors" disabled>
-                <option selected disabled>Loading...</option>
-            </select>
-        
-            <button class="btn">TILFØJ</button>
-        </form>
-    </form-component>
-    <ul id="sector-list">
-    </ul>
+                <input-component>
+                    <span slot="hint">Slut år</span>
+                    <input class="input-number" slot="input" type="number" required>
+                </input-component>
 
-    </body>
+                <button class="button-primary">TILFØJ</button>
+                <button class="button-primary">ANNULLER</button>
+            </form>
+        </form-component>
+        <ul id="work-list">
+        </ul>
+    </li>
+    <li>
+        <form-component>
+            <h1 slot="title">Fritekst</h1>
+            <form slot="form" onsubmit="getUserDescription(event)" id="description-form">
+                <input-component>
+                    <span slot="hint">Fritekst</span>
+                    <input slot="input" type="text" required>
+                </input-component>
+                <button class="button-primary">GEM</button>
+                <button class="button-primary">ANNULLER</button>
+            </form>
+        </form-component>
+    </li>
+    <li>
+        <form-component>
+            <h1 slot="title">Sektorer</h1>
+            <form slot="form" onsubmit="addSector(event)" id="sector-form">
+                <label for="sectors">Sektorer (maks 3):</label>
+                <select name="Sectors" id="sectors" disabled>
+                    <option selected disabled>Loading...</option>
+                </select>
+                <button class="btn">TILFØJ</button>
+            </form>
+        </form-component>
+        <ul id="sector-list">
+        </ul>
+    </li>
+
+</ul>
+</body>
 </html>

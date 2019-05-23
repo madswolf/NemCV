@@ -5,11 +5,11 @@ function getUserInfo(event){
     event.preventDefault();
     const formElement = document.getElementById(event.target.id);
     const children  = formElement.children;
-    const name =  children[2].value;
-    const age =  children[4].value;
-    const email =  children[6].value;
-    const city  =  children[8].value;
-    const picture = children[10].value;
+    const name =  children[0].value();
+    const age =  children[1].value();
+    const email =  children[2].value();
+    const city  =  children[3].value();
+    const picture = children[4].value();
 
     info = {name, age, email, city, picture};
 
