@@ -21,21 +21,23 @@
 
 <ul class="center-content">
     <li>
-    <h1>Udfyld kategorierne</h1>
+    <h1>UDFYLD</h1>
     </li>
     <li>
         <form-component>
             <h1 slot="title">Info</h1>
             <form autocomplete="off" slot="form" onsubmit="getUserInfo(event)" id="info-form">
-                <input-component>
-                    <span slot="hint">Navn</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                <div>
+                    <input-component>
+                        <span slot="hint">Navn</span>
+                        <input slot="input" type="text" required>
+                    </input-component>
 
-                <input-component>
-                    <span slot="hint">Alder</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
+                    <input-component>
+                        <span slot="hint">Alder</span>
+                        <input class="input-number" slot="input" type="number" required>
+                    </input-component>
+                </div>
 
                 <input-component>
                     <span slot="hint">Email</span>
@@ -77,6 +79,7 @@
                     <input slot="input" type="text" required>
                 </input-component>
 
+                <div>
                 <input-component>
                     <span slot="hint">Start år</span>
                     <input class="input-number" slot="input" type="number" required>
@@ -86,9 +89,12 @@
                     <span slot="hint">Slut år</span>
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
+                </div>
 
-                <button class="button-primary">TILFØJ</button>
-                <button class="button-primary">ANNULLER</button>
+                <div>
+                    <button class="button-primary button-small">TILFØJ</button>
+                    <button class="button-primary button-small">ANNULLER</button>
+                </div>
             </form>
         </form-component>
         <ul id="education-list">
@@ -110,18 +116,22 @@
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
-                    <span slot="hint">Start år</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
+                <div>
+                    <input-component>
+                        <span slot="hint">Start år</span>
+                        <input class="input-number" slot="input" type="number" required>
+                    </input-component>
 
-                <input-component>
-                    <span slot="hint">Slut år</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
+                    <input-component>
+                        <span slot="hint">Slut år</span>
+                        <input class="input-number" slot="input" type="number" required>
+                    </input-component>
+                </div>
 
-                <button class="button-primary">TILFØJ</button>
-                <button class="button-primary">ANNULLER</button>
+                <div>
+                    <button class="button-primary button-small">TILFØJ</button>
+                    <button class="button-primary button-small">ANNULLER</button>
+                </div>
             </form>
         </form-component>
         <ul id="work-list">
