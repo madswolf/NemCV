@@ -8,14 +8,14 @@ function getUserInfo(event){
     event.preventDefault();
 
     const shadowRoot  = event.target.parentNode.getShadowRoot();
-    const formElement = shadowRoot.host.children[0].children[1];
+    const formElement = shadowRoot.host.children[1];
 
     const children = formElement.children;
-    const name    = children[1];
-    const age     = children[3];
-    const email   = children[5];
-    const city    = children[7];
-    const picture = children[9];
+    const name    = children[0].children[1].value;
+    const age     = children[1].children[1].value;
+    const email   = children[2].children[1].value;
+    const city    = children[3].children[1].value;
+    const picture = children[4].children[1].value;
 
     info = { name, age, email, city, picture };
 
