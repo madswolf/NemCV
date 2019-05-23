@@ -60,15 +60,24 @@ class FormWebcomponent extends HTMLElement {
             <button onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
             <div class='content' id='content'>
                 <h1 class='title' id='contentTitle'></h1>
-                <slot name='form'></slot>
+                <slot name='form' id="form"></slot>
                 <slot name='add-button'></slot>
                 <button class="button-primary" onclick='dontShowContent(this)'>OK</button>
                 <button class="button-primary" onclick='dontShowContent(this)'>CANCEL</button>
             </div>`;
     }
 
-    getShadowRoot(){
-        return this.shadowRoot;
+    getInput(){
+
+        let inputElements = this.querySelectorAll("input-component");
+        let input = {};
+
+        for(let i = 0; i < inputElements.length ; i++){
+            console.log(inputElements[i].value());
+            input[inputElements[i].id] = inputElements[i].value();
+        }
+
+        return input;
     }
 }
 

@@ -22,9 +22,9 @@
     <h1>Udfyld kategorierne</h1>
     </li>
     <li>
-        <form-component>
+        <form-component onsubmit="getUserInfo(this); return false;">
             <h1 slot="title">Info</h1>
-            <form autocomplete="off" slot="form" onsubmit="getUserInfo(event)" id="info-form">
+            <form autocomplete="off" slot="form"  id="info-form">
                 <input-component>
                     <span slot="hint">Navn</span>
                     <input slot="input" type="text" required>
@@ -61,26 +61,26 @@
 
     <li>
 
-        <form-component>
+        <form-component onsubmit="createAccomplishment(this); return false;">
             <h1 slot="title">Uddannelse</h1>
-            <form slot="form" onsubmit="createAccomplishment(event)" id="education-form">
+            <form slot="form" id="education-form">
 
-                <input-component>
+                <input-component name="input" id="place">
                     <span slot="hint">Uddannelsessted</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
+                <input-component name="input" id="type">
                     <span slot="hint">Title</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
+                <input-component name="input" id="from">
                     <span slot="hint">Start år</span>
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
 
-                <input-component>
+                <input-component name="input" id="to">
                     <span slot="hint">Slut år</span>
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
@@ -94,26 +94,26 @@
     </li>
 
     <li>
-        <form-component>
+        <form-component onsubmit="createAccomplishment(this); return false;">
             <h1 slot="title">Erfaring</h1>
-            <form slot="form" onsubmit="createAccomplishment(event)" id="work-form">
+            <form slot="form" id="work-form">
 
-                <input-component>
+                <input-componentd name="input" id="place">
                     <span slot="hint">Arbejdssted</span>
                     <input slot="input" type="text" required>
-                </input-component>
+                </input-componentd>
 
-                <input-component>
+                <input-component name="input" id="type">
                     <span slot="hint">Stilling</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
+                <input-component name="input" id="from">
                     <span slot="hint">Start år</span>
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
 
-                <input-component>
+                <input-component name="input" id="to">
                     <span slot="hint">Slut år</span>
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
@@ -126,9 +126,9 @@
         </ul>
     </li>
     <li>
-        <form-component>
+        <form-component onsubmit="getUserDescription(this); return false;">
             <h1 slot="title">Fritekst</h1>
-            <form slot="form" onsubmit="getUserDescription(event)" id="description-form">
+            <form slot="form" id="description-form">
                 <input-component>
                     <span slot="hint">Fritekst</span>
                     <input slot="input" type="text" required>
@@ -139,9 +139,9 @@
         </form-component>
     </li>
     <li>
-        <form-component>
+        <form-component onsubmit="addSector(this); return false;">
             <h1 slot="title">Sektorer</h1>
-            <form slot="form" onsubmit="addSector(event)" id="sector-form">
+            <form slot="form" id="sector-form">
                 <label for="sectors">Sektorer (maks 3):</label>
                 <select name="Sectors" id="sectors" disabled>
                     <option selected disabled>Loading...</option>

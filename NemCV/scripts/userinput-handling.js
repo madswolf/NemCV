@@ -4,21 +4,8 @@
 let info = {};
 let description = {};
 
-function getUserInfo(event){
-    event.preventDefault();
-
-    const shadowRoot  = event.target.parentNode.getShadowRoot();
-    const formElement = shadowRoot.host.children[1];
-
-    const children = formElement.children;
-    const name    = children[0].children[1].value;
-    const age     = children[1].children[1].value;
-    const email   = children[2].children[1].value;
-    const city    = children[3].children[1].value;
-    const picture = children[4].children[1].value;
-
-    info = { name, age, email, city, picture };
-
+function getUserInfo(formElement){
+    info = formElement.getInput();
     updateUserInfo();
 }
 
@@ -49,11 +36,8 @@ function deleteInfo(id){
     updateUserInfo();
 }
 
-function getUserDescription(event) {
-    event.preventDefault();
-    const shadowRoot  = event.target.parentNode.getShadowRoot();
-    const formElement = shadowRoot.host.children[1];
-    description =  formElement.children[0].value;
+function getUserDescription(formElement) {
+    description =  formElement.getInput();
 
     console.log(description);
 }
@@ -71,23 +55,11 @@ function getList(id) {
 }
 
 
-function createAccomplishment(event){
-    event.preventDefault();
-   
-    const shadowRoot = event.target.parentNode.shadowRoot;
-    const formElement = shadowRoot.host.children[1];
-    const children  = formElement.children;
-    const   place   =  children[1].value;
-    const   type    =  children[3].value;
-    const startYear =  children[5].value;
-    const  endYear  =  children[7].value;
+function createAccomplishment(formElement){
 
-    const accomplishment = {
-        "name" : place,
-        "title": type,
-        "from" : startYear,
-        "to"   : endYear
-    };
+
+    const accomplishment = formElement.getInput();
+
 
     const list = getList(formElement.id);
     list.push(accomplishment);
@@ -97,14 +69,13 @@ function createAccomplishment(event){
 }
 
 
-function addSector(event){
-    event.preventDefault();
+function addSector(formElement){
     if(sectorList.length === 3){
         //Lav metode som alerter brugeren om at listen er fuld
         return;
     }
 
-    const shadowRoot = event.target.parentNode.getShadowRoot();
+    const shadowRoot = formElement.shadowRoot;
     const sectorDropDown = shadowRoot.host.children[1].children[1];
     const selected = sectorDropDown.options[sectorDropDown.selectedIndex];
     sectorList.push(selected.text);
