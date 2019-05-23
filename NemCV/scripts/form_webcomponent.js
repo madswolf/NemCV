@@ -6,22 +6,25 @@ class FormWebcomponent extends HTMLElement {
             <link rel='stylesheet' href='./Styles/reset.css' >
             <link rel='stylesheet' href='./Styles/form.css' >
             <style>
-                h1{
+            
+            
+                .font{
                     font-family: var(--headline-large);
                     color: var(--primary-color);
-                    font-size: var(--headline-large-size);
-                    font-weight: var(--headline-large-font-weight) ;
+                    font-weight: var(--headline-large-font-weight);
                     letter-spacing: var(--headline-large-letter-spaceing);
+                }
+                
+                h1{
+                    font-size: var(--headline-large-size);
                     justify-content: center;
                     align-items: center;
                     display: flex;
+                    margin-top: 10px;
                     margin-bottom: 10px;
                 }
-                button{
-                    font-family: var(--headline-large);
-                    font-weight: var(--headline-large-font-weight) ;
-                    letter-spacing: var(--headline-large-letter-spaceing);
-                    color: var(--secondary-secondary-color);
+                
+                .btn{
                     font-size: var(--bodytext-size);
                     text-transform: uppercase;
                     background-color: transparent;
@@ -31,46 +34,57 @@ class FormWebcomponent extends HTMLElement {
                     padding-right: 1rem;
                     width: 400px;
                     margin-top: 10px;
+                    cursor: pointer;
                     }
                 
                     
-                button:hover{
+                .btn:hover{
                     background-color: rgba(255, 255, 255, 0.50);
                 }
-                button:focus {
+                .btn:focus {
                     outline: 0;
                 }
                 
-                .button-primary{
-                    border-color: var(--primary-color);
+                .button-close{
+                    font-size: var(--bodytext-size);
+                    background-color: transparent;
+                    position: absolute;
                     color: var(--primary-color);
-                    width: 125px;
+                    border-style: none;
+                    bottom: 0;
+                    right: 0;
+                    margin-bottom: 25px;
+                    margin-right: 50px;
                 }
                 
-                .button-primary:hover{
-                    background-color: rgba(55, 0, 179, 0.5);
+                .button-close:hover{
+                    cursor: pointer;
                 }
+                
+                .button-close:focus {
+                    outline: 0;
+                }
+                
                 
                 .content {
+                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
                     display: none;
                     overflow: hidden;
                     background-color: white;
                     position:absolute;
-                    z-index:100;
-                    left:10%;
-                    top:10%;
-                    bottom: 10%;
+                    max-width: 500px;
+                    min-width: 500px;
+                    margin: auto;
+                    left: 10%;
                     right: 10%;
+                    top: 20%;
+                    bottom: 20%;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
                     border-radius: 50px;
-                    border-color: #03DAC6;
-                    border-style: solid;
-                    border-width: 5px;
                 }
                 
-                @keyframes scale-up-center {
+                @keyframes scale-up {
                     from {
                       transform: scale(0.1);
                       transform-origin: 50% 50%;
@@ -82,23 +96,29 @@ class FormWebcomponent extends HTMLElement {
                     
                 }
                 
-                .scale-up-center {
-                animation-name: scale-up-center;
-                animation-duration: 0.5s;
-                animation-timing-function: cubic-bezier(0.390, 0.575, 0.565, 1.000);
-                animation-direction: normal;
-                animation-fill-mode: forwards;
+                @keyframes scale-down {
+                from {
+                      transform: scale(1);
+                      transform-origin: 50% 50%;
+                    }
+                    to {
+                      transform: scale(0.0);
+                      transform-origin: 50% 50%;
+                    }
+                }
+                
+                .scale-up {
+                animation: scale-up 250ms linear forwards;
                 }
             </style>
 
             
-            <button onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
-            <div class='content scale-up-center' id='content'>
-                <h1 class='title' id='contentTitle'></h1>
+            <button class="font btn" onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
+            <div class='content scale-up' id='content'>
+                <h1 class='font title' id='contentTitle'></h1>
                 <slot name='form'></slot>
                 <slot name='add-button'></slot>
-                <button class="button-primary" onclick='dontShowContent(this)'>OK</button>
-                <button class="button-primary" onclick='dontShowContent(this)'>CANCEL</button>
+                <button class="font button-close" onclick='dontShowContent(this)'>Luk</button>
             </div>`;
     }
 
@@ -119,8 +139,17 @@ function showContent(collapsible) {
     content.style.display = "flex";
 }
 
+
+
 function dontShowContent(goBackButton) {
     let shadowRoot = goBackButton.parentElement.parentNode;
     let content = shadowRoot.getElementById("content");
+    content.style.animation = "scale-down 250ms linear forwards";
+    setTimeout(swapAnimations, 250, content);
+}
+
+function swapAnimations(content){
     content.style.display = "none";
+    content.style.animation = "scale-up 250ms linear forwards";
+
 }
