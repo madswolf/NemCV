@@ -137,8 +137,17 @@ body {
 .selling-point img {
     height: 100px;
     width: 100px;
-    align-self: center;
-    margin-bottom: 5px;
+}
+
+.button-medium{
+    font-size: 50px;
+    border-width: 5px;
+    width: 250px;
+}
+
+.center{
+    margin: auto;
+    display: block;
 }
 
 /*----------------------------------------------------------------------------\

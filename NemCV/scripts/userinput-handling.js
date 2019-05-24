@@ -4,28 +4,20 @@
 let info = {};
 let description = {};
 
-function getUserInfo(event){
-    event.preventDefault();
-
-    const shadowRoot  = event.target.parentNode.getShadowRoot();
-    const formElement = shadowRoot.host.children[1];
-
-    const children = formElement.children;
-    const name    = children[1];
-    const age     = children[3];
-    const email   = children[5];
-    const city    = children[7];
-    const picture = children[9];
-
-    info = { name, age, email, city, picture };
-
-    updateUserInfo();
+function getUserInfo(formElement){
+    info = formElement.getInput();
+    console.log(info);
+    updateUserInfo(formElement);
 }
 
 
-function updateUserInfo(){
+function updateUserInfo(formElement){
+    
     const ul = document.getElementById("info");
-    console.log(info);
+    if(ul.children.length === 1){ 
+        alert("Du kan ikke have mere end én info");
+        return; 
+    }
     for(let i = 0; i < info.length; i++) {
         const li = document.createElement("LI");
         const textNode = document.createTextNode(info[i].labels[0] + info[i].text);
@@ -39,7 +31,7 @@ function updateUserInfo(){
     button.setAttribute("onclick", "deleteInfo(this.id)");
 
     ul.appendChild(button);
-    
+    console.log(info);
 }
 
 function deleteInfo(id){
@@ -49,13 +41,9 @@ function deleteInfo(id){
     updateUserInfo();
 }
 
-function getUserDescription(event) {
-    event.preventDefault();
-    const shadowRoot  = event.target.parentNode.getShadowRoot();
-    const formElement = shadowRoot.host.children[1];
-    description =  formElement.children[0].value;
+function getUserDescription(formElement) {
+    description =  formElement.getInput();
 
-    console.log(description);
 }
 
 let eduList = [];
@@ -71,23 +59,9 @@ function getList(id) {
 }
 
 
-function createAccomplishment(event){
-    event.preventDefault();
-   
-    const shadowRoot = event.target.parentNode.shadowRoot;
-    const formElement = shadowRoot.host.children[1];
-    const children  = formElement.children;
-    const   place   =  children[1].value;
-    const   type    =  children[3].value;
-    const startYear =  children[5].value;
-    const  endYear  =  children[7].value;
-
-    const accomplishment = {
-        "name" : place,
-        "title": type,
-        "from" : startYear,
-        "to"   : endYear
-    };
+function createAccomplishment(formElement){
+    
+    const accomplishment = formElement.getInput();
 
     const list = getList(formElement.id);
     list.push(accomplishment);
@@ -97,15 +71,15 @@ function createAccomplishment(event){
 }
 
 
-function addSector(event){
-    event.preventDefault();
+function addSector(formElement){
     if(sectorList.length === 3){
         //Lav metode som alerter brugeren om at listen er fuld
         return;
     }
 
-    const shadowRoot = event.target.parentNode.getShadowRoot();
-    const sectorDropDown = shadowRoot.host.children[1].children[1];
+    const shadowRoot = formElement.shadowRoot;
+    const formSlot = shadowRoot.getElementById("form");
+    const sectorDropDown = formSlot.assignedElements()[0].querySelector("select");
     const selected = sectorDropDown.options[sectorDropDown.selectedIndex];
     sectorList.push(selected.text);
     selected.disabled = true;
