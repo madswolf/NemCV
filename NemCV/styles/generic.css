@@ -20,7 +20,6 @@ h1{
     font-size: var(--headline-large-size);
     font-weight: var(--headline-large-font-weight) ;
     letter-spacing: var(--headline-large-letter-spaceing);
-    padding-bottom: 20px;
 }
 
 h2{

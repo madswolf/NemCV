@@ -122,7 +122,7 @@ class FormWebcomponent extends HTMLElement {
             
             <button class="font btn" onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
             <div class='content scale-up' id='content'>
-                <h1 class='title' id='contentTitle'></h1>
+                <h1 class='font' id='contentTitle'></h1>
                 <slot name='form' id="form"></slot>
                 <slot name='add-button'></slot>
                 <button class="font button-close" onclick='dontShowContent(this)'>Luk</button>

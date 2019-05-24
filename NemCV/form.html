@@ -21,9 +21,6 @@
 
 <ul class="center-content">
     <li>
-    <h1>Udfyld kategorierne</h1>
-    </li>
-    <li>
         <form-component onsubmit="getUserInfo(this); return false;">
             <h1 slot="title">INFO</h1>
             <form autocomplete="off" slot="form"  id="info-form">
@@ -34,7 +31,8 @@
                 </input-component>
 
                 <div>
-                    <input-component id="age>
+
+                    <input-component id="age">
                         <span slot="hint">Alder</span>
                         <input class="input-number" slot="input" type="number" required>
                     </input-component>
@@ -141,7 +139,7 @@
             <form slot="form">
                 <input-component>
                     <span slot="hint">Fritekst</span>
-                    <textarea slot="input" rows="203" cols="50" ></textarea>
+                    <textarea slot="input" rows="20" cols="50" ></textarea>
                 </input-component>
                 <button class="button-primary">GEM</button>
             </form>
