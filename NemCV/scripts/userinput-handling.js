@@ -6,6 +6,7 @@ let description = {};
 
 function getUserInfo(formElement){
     info = formElement.getInput();
+    console.log(info);
     updateUserInfo(formElement);
 }
 

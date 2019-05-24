@@ -25,27 +25,27 @@
         <form-component onsubmit="getUserInfo(this); return false;">
             <h1 slot="title">Info</h1>
             <form autocomplete="off" slot="form"  id="info-form">
-                <input-component>
+                <input-component id=""name>
                     <span slot="hint">Navn</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
+                <input-component id="age">
                     <span slot="hint">Alder</span>
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
 
-                <input-component>
+                <input-component id="email">
                     <span slot="hint">Email</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
+                <input-component id="city">
                     <span slot="hint">By</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component>
+                <input-component id="picture">
                     <span slot="hint">Billede URL</span>
                     <input slot="input" type="text" required>
                 </input-component>
