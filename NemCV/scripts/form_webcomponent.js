@@ -33,6 +33,7 @@ class FormWebcomponent extends HTMLElement {
                     width: 370px;
                     margin-bottom: 20px;
                     cursor: pointer;
+                    padding: 15px;
                     }
                 
                     
