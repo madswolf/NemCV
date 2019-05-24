@@ -11,8 +11,12 @@ function getUserInfo(formElement){
 
 
 function updateUserInfo(formElement){
+    
     const ul = document.getElementById("info");
-    console.log(info);
+    if(ul.children.length === 1){ 
+        alert("Du kan ikke have mere end én info");
+        return; 
+    }
     for(let i = 0; i < info.length; i++) {
         const li = document.createElement("LI");
         const textNode = document.createTextNode(info[i].labels[0] + info[i].text);
@@ -26,7 +30,7 @@ function updateUserInfo(formElement){
     button.setAttribute("onclick", "deleteInfo(this.id)");
 
     ul.appendChild(button);
-    
+    console.log(info);
 }
 
 function deleteInfo(id){
@@ -39,7 +43,6 @@ function deleteInfo(id){
 function getUserDescription(formElement) {
     description =  formElement.getInput();
 
-    console.log(description);
 }
 
 let eduList = [];
@@ -56,10 +59,8 @@ function getList(id) {
 
 
 function createAccomplishment(formElement){
-
-
+    
     const accomplishment = formElement.getInput();
-    console.log(accomplishment);
 
     const list = getList(formElement.id);
     list.push(accomplishment);
