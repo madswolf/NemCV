@@ -19,7 +19,7 @@ body {
     position: fixed;
     right: 10px;
     top: 50%;
-    margin-top: -75px;
+    margin-top: -55px;
 }
 
 .nav .item {
@@ -29,10 +29,7 @@ body {
     background-color: transparent;
     border-radius: 50%;
     margin: 10px;
-}
-
-.nav .item:hover {
-    background: var(--secondary-secondary-color);
+    padding: 0;
 }
 
 .nav .in-viewport {
@@ -71,8 +68,8 @@ body {
 
 .centered-button{
     text-align: center;
-    padding: 40px;
-    font-size: 50px;
+    padding: 20px;
+    font-size: 40px;
     border-radius: 200px;
     margin-bottom: 20px;
 }
@@ -181,9 +178,6 @@ body {
    }
    .selling-point {
        width: 50%;
-   }
-   .nav {
-     display: none;
    }
  }
 

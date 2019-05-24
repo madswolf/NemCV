@@ -48,6 +48,25 @@ window.addEventListener('wheel', (event) => {
 
 });
 
+let prevDirection = 0;
+window.addEventListener('touchmove', (event) => {
+    scrollDirection = prevDirection - event.changedTouches[0].clientY;
+    prevDirection = event.changedTouches[0].clientY;
+    console.log(scrollDirection);
+});
+
+window.addEventListener('touchend', () => {
+
+    if(scrollTimeout !== null){
+        clearTimeout(scrollTimeout);
+    }
+
+    scrollTimeout = setTimeout(scrollEndHandler, 750);
+
+});
+
+
+
 const portionOfNewViewForAutoScroll = 0.2;
 function scrollEndHandler() {
     let prevElement = null;
