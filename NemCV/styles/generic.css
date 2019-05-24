@@ -1,7 +1,7 @@
 
 body {
     width: 100%;
-    background-image: linear-gradient(-50deg,
+    background-image: linear-gradient(to bottom right,
     var(--secondary-color),  var(--primary-color));
 }
 
