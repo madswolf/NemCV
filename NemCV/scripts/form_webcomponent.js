@@ -30,9 +30,10 @@ class FormWebcomponent extends HTMLElement {
                     background-color: transparent;
                     border-style: solid;
                     border-radius: 50px;
-                    width: 370px;
+                    width: 300px;
                     margin-bottom: 20px;
                     cursor: pointer;
+                    padding: 10px;
                     }
                 
                     
@@ -71,8 +72,8 @@ class FormWebcomponent extends HTMLElement {
                     background-color: white;
                     left: 3%;
                     right: 3%;
-                    top: 20%;
-                    bottom: 20%;
+                    top: 15%;
+                    bottom: 15%;
                     position:absolute;
                     margin: auto;
                     flex-direction: column;
@@ -88,6 +89,13 @@ class FormWebcomponent extends HTMLElement {
                     right: 10%;
                     top: 20%;
                     bottom: 20%;
+                    }
+                }
+                
+                @media only screen and (max-height: 700px) {
+                .content{
+                      top: 3%;
+                        bottom: 3%;  
                     }
                 }
                 

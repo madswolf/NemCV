@@ -1,6 +1,5 @@
 
 body {
-    width: 100%;
     background-image: linear-gradient(-50deg,
     var(--secondary-color),  var(--primary-color));
     display: flex;
@@ -20,7 +19,7 @@ body {
     position: fixed;
     right: 10px;
     top: 50%;
-    margin-top: -75px;
+    margin-top: -55px;
 }
 
 .nav .item {
@@ -30,10 +29,7 @@ body {
     background-color: transparent;
     border-radius: 50%;
     margin: 10px;
-}
-
-.nav .item:hover {
-    background: var(--secondary-secondary-color);
+    padding: 0;
 }
 
 .nav .in-viewport {
@@ -49,14 +45,14 @@ body {
 .section {
     width: 100%;
     min-height: 100vh;
-    margin-bottom: 100px;
 }
 
 .section1 {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
-.section3 {
+.section2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,11 +68,22 @@ body {
 
 .centered-button{
     text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 200px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .centered-button{
+        font-size: 30px;
+        padding: 30px;
+    }
 }
 
 .centered-button-box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 
 }
@@ -104,6 +111,13 @@ body {
     max-width: 70%;
     min-width: 20%;
 }
+
+@media only screen and (min-width: 1350px){
+    .banner{
+        height: 650px;
+        object-fit: cover;
+    }
+}
 /*----------------------------------------------------------------------------\
 
  #SELLINGPOINTS
@@ -114,8 +128,10 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    flex-grow: 1;
 }
 
 .selling-point {
@@ -129,11 +145,11 @@ body {
 
 .selling-point img {
     height: 100px;
-    width: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .button-medium{
-    font-size: 50px;
     border-width: 5px;
     width: 250px;
 }
@@ -149,7 +165,7 @@ body {
 
 *----------------------------------------------------------------------------*/
 
- @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 800px) {
 
    .sellings-points {
        display: flex;
@@ -157,14 +173,11 @@ body {
    }
    .selling-point img {
        height: 70px;
-       width: 70px;
-       align-self: center;
+       object-fit: contain;
+       margin-bottom: 10px;
    }
    .selling-point {
        width: 50%;
-   }
-   .nav {
-     display: none;
    }
  }
 
@@ -175,3 +188,4 @@ body {
       justify-content: center;
   }
 }
+

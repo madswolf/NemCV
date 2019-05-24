@@ -8,11 +8,6 @@ function scrollToElement(elementName){
     console.log(elementName);
     const element = document.getElementById(elementName);
     element.scrollIntoView({behavior: "smooth"});
-
-
-
-
-
 }
 
 const allElements = document.getElementsByClassName("section");
@@ -52,6 +47,25 @@ window.addEventListener('wheel', (event) => {
     scrollTimeout = setTimeout(scrollEndHandler, scrollEndDelay);
 
 });
+
+let prevDirection = 0;
+window.addEventListener('touchmove', (event) => {
+    scrollDirection = prevDirection - event.changedTouches[0].clientY;
+    prevDirection = event.changedTouches[0].clientY;
+    console.log(scrollDirection);
+});
+
+window.addEventListener('touchend', () => {
+
+    if(scrollTimeout !== null){
+        clearTimeout(scrollTimeout);
+    }
+
+    scrollTimeout = setTimeout(scrollEndHandler, 750);
+
+});
+
+
 
 const portionOfNewViewForAutoScroll = 0.2;
 function scrollEndHandler() {

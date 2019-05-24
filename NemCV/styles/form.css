@@ -7,6 +7,10 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 30px;
+}
+
 .center-content li{
     display: flex;
     justify-content: center;
