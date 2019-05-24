@@ -1,11 +1,13 @@
 
-
-
 body {
     width: 100%;
     background-image: linear-gradient(-50deg,
     var(--secondary-color),  var(--primary-color));
+    display: flex;
+    flex-direction: column;
 }
+
+
 
 /*----------------------------------------------------------------------------*\
 
@@ -46,15 +48,44 @@ body {
 
 .section {
     width: 100%;
-    height: 100vh;
-    background-color: var(--primary-color);
-    padding: 0px;
-
+    min-height: 100vh;
+    margin-bottom: 100px;
 }
+
+.section1 {
+    display: inline-block;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /*----------------------------------------------------------------------------*\
 
-#FRONTPAGE
+#BUTTONS
+
+\*----------------------------------------------------------------------------*/
+
+.centered-button{
+    text-align: center;
+}
+
+.centered-button-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+
+/*----------------------------------------------------------------------------*\
+
+#PICTURE
 
 \*----------------------------------------------------------------------------*/
 
@@ -63,9 +94,19 @@ body {
     background-color: transparent;
 }
 
+.cv-example {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-example img{
+    max-width: 70%;
+    min-width: 20%;
+}
 /*----------------------------------------------------------------------------\
 
- #TEMP
+ #SELLINGPOINTS
 
  *----------------------------------------------------------------------------*/
 
@@ -73,10 +114,17 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .selling-point {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     margin: 20px;
+    text-align: center;
+    width: 20%;
 }
 
 .selling-point img {
@@ -93,4 +141,37 @@ body {
 .center{
     margin: auto;
     display: block;
+}
+
+/*----------------------------------------------------------------------------\
+
+ #MEDIA QUERIES
+
+*----------------------------------------------------------------------------*/
+
+ @media only screen and (max-width: 768px) {
+
+   .sellings-points {
+       display: flex;
+       flex-direction: column;
+   }
+   .selling-point img {
+       height: 70px;
+       width: 70px;
+       align-self: center;
+   }
+   .selling-point {
+       width: 50%;
+   }
+   .nav {
+     display: none;
+   }
+ }
+
+@media only screen and (max-width: 600px) {
+  .section h1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
 }

@@ -122,21 +122,38 @@ class FormWebcomponent extends HTMLElement {
             
             <button class="font btn" onclick='showContent(this)' id='collapsible'><slot name='title' class='title' id='title'></slot></button>
             <div class='content scale-up' id='content'>
-                <h1 class='font title' id='contentTitle'></h1>
-                <slot name='form'></slot>
+                <h1 class='title' id='contentTitle'></h1>
+                <slot name='form' id="form"></slot>
                 <slot name='add-button'></slot>
                 <button class="font button-close" onclick='dontShowContent(this)'>Luk</button>
                 <slot name="list"></slot>
             </div>`;
     }
 
-    getShadowRoot(){
-        return this.shadowRoot;
+    getInput(){
+
+        let inputElements = this.querySelectorAll("input-component");
+        let input = {};
+
+        for(let i = 0; i < inputElements.length ; i++){
+            console.log(inputElements[i].value());
+            input[inputElements[i].id] = inputElements[i].value();
+        }
+
+        return input;
+    }
+
+    reset(){
+        let formSlot = this.shadowRoot.getElementById("form");
+        let formElement = formSlot.assignedElements()[0];
+        formElement.reset();
     }
 }
 
 customElements.define('form-component', FormWebcomponent);
 
+/*                                   *\
+\*             BEHAVIOUR             */
 
 function showContent(collapsible) {
     let shadowRoot = collapsible.parentNode;
