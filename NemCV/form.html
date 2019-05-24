@@ -61,9 +61,9 @@
 
     <li>
 
-        <form-component onsubmit="createAccomplishment(this); return false;">
+        <form-component onsubmit="createAccomplishment(this); return false;" id="education-form">
             <h1 slot="title">Uddannelse</h1>
-            <form slot="form" id="education-form">
+            <form slot="form">
 
                 <input-component name="input" id="place">
                     <span slot="hint">Uddannelsessted</span>
@@ -94,9 +94,9 @@
     </li>
 
     <li>
-        <form-component onsubmit="createAccomplishment(this); return false;">
+        <form-component onsubmit="createAccomplishment(this); return false;" id="work-form">
             <h1 slot="title">Erfaring</h1>
-            <form slot="form" id="work-form">
+            <form slot="form">
 
                 <input-componentd name="input" id="place">
                     <span slot="hint">Arbejdssted</span>
@@ -126,9 +126,9 @@
         </ul>
     </li>
     <li>
-        <form-component onsubmit="getUserDescription(this); return false;">
+        <form-component onsubmit="getUserDescription(this); return false;" id="description-form">
             <h1 slot="title">Fritekst</h1>
-            <form slot="form" id="description-form">
+            <form slot="form">
                 <input-component>
                     <span slot="hint">Fritekst</span>
                     <input slot="input" type="text" required>
@@ -139,9 +139,9 @@
         </form-component>
     </li>
     <li>
-        <form-component onsubmit="addSector(this); return false;">
+        <form-component onsubmit="addSector(this); return false;" id="sector-form">
             <h1 slot="title">Sektorer</h1>
-            <form slot="form" id="sector-form">
+            <form slot="form">
                 <label for="sectors">Sektorer (maks 3):</label>
                 <select name="Sectors" id="sectors" disabled>
                     <option selected disabled>Loading...</option>

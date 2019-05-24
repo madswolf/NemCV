@@ -79,7 +79,14 @@ class FormWebcomponent extends HTMLElement {
 
         return input;
     }
+
+    reset(){
+        let formSlot = this.shadowRoot.getElementById("form");
+        let formElement = formSlot.assignedElements()[0];
+        formElement.reset();
+    }
 }
+
 
 customElements.define('form-component', FormWebcomponent);
 

@@ -6,11 +6,11 @@ let description = {};
 
 function getUserInfo(formElement){
     info = formElement.getInput();
-    updateUserInfo();
+    updateUserInfo(formElement);
 }
 
 
-function updateUserInfo(){
+function updateUserInfo(formElement){
     const ul = document.getElementById("info");
     console.log(info);
     for(let i = 0; i < info.length; i++) {
@@ -59,7 +59,7 @@ function createAccomplishment(formElement){
 
 
     const accomplishment = formElement.getInput();
-
+    console.log(accomplishment);
 
     const list = getList(formElement.id);
     list.push(accomplishment);
@@ -76,7 +76,8 @@ function addSector(formElement){
     }
 
     const shadowRoot = formElement.shadowRoot;
-    const sectorDropDown = shadowRoot.host.children[1].children[1];
+    const formSlot = shadowRoot.getElementById("form");
+    const sectorDropDown = formSlot.assignedElements()[0].querySelector("select");
     const selected = sectorDropDown.options[sectorDropDown.selectedIndex];
     sectorList.push(selected.text);
     selected.disabled = true;
