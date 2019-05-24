@@ -20,8 +20,8 @@ class FormWebcomponent extends HTMLElement {
                     justify-content: center;
                     align-items: center;
                     display: flex;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
                 }
                 
                 .btn{
@@ -30,10 +30,8 @@ class FormWebcomponent extends HTMLElement {
                     background-color: transparent;
                     border-style: solid;
                     border-radius: 50px;
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                    width: 400px;
-                    margin-top: 10px;
+                    width: 370px;
+                    margin-bottom: 20px;
                     cursor: pointer;
                     }
                 
@@ -71,17 +69,26 @@ class FormWebcomponent extends HTMLElement {
                     display: none;
                     overflow: hidden;
                     background-color: white;
+                    left: 3%;
+                    right: 3%;
+                    top: 20%;
+                    bottom: 20%;
                     position:absolute;
+                    margin: auto;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 50px;
+                }
+                
+                @media only screen and (min-width: 700px) {
+                .content{
                     max-width: 500px;
                     min-width: 500px;
-                    margin: auto;
                     left: 10%;
                     right: 10%;
                     top: 20%;
                     bottom: 20%;
-                    flex-direction: column;
-                    align-items: center;
-                    border-radius: 50px;
+                    }
                 }
                 
                 @keyframes scale-up {
@@ -119,6 +126,7 @@ class FormWebcomponent extends HTMLElement {
                 <slot name='form'></slot>
                 <slot name='add-button'></slot>
                 <button class="font button-close" onclick='dontShowContent(this)'>Luk</button>
+                <slot name="list"></slot>
             </div>`;
     }
 

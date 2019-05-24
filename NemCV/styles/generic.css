@@ -71,6 +71,8 @@ button:focus {
 
 
 .button-primary{
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-color: var(--primary-color);
     color: var(--primary-color);
 }
@@ -88,7 +90,7 @@ input{
     background-color: transparent;
     border-style: none;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: var(--input-size);
     width: 300px;
     color: var(--primary-color);
 }
@@ -98,6 +100,6 @@ input:focus{
 }
 
 .input-number{
-    width: 75px;
+    width: 140px;
 }
 

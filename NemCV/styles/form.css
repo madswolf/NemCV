@@ -20,3 +20,25 @@ form{
     align-items: center;
 
 }
+
+textarea{
+    font-family: var(--bodytext);
+    font-size: var(--bodytext-size);
+    color: var(--primary-color);
+    resize: none;
+    border: none;
+    overflow-y: scroll;
+}
+
+textarea:focus{
+    outline: 0;
+}
+
+select{
+    padding: 5px;
+    border: none;
+}
+
+select:focus{
+    outline: 0;
+}

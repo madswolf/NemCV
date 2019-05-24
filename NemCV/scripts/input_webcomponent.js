@@ -30,7 +30,7 @@ class InputWebComponent extends HTMLElement{
                     padding-left: 5px;
                     padding-right: 5px;
                     display: inline-block;
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                 } 
                 
                 input{

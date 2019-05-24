@@ -36,5 +36,8 @@
     --bodytext-size: 14px;
     --bodytext-font-weight: 400;
     --bodytext-letter-spaceing: 0.016rem;
+
+    /* input: text */
+    --input-size: 20px;
 }
 
