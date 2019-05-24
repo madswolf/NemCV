@@ -12,11 +12,11 @@ function getUserInfo(formElement){
 
 
 function updateUserInfo(formElement){
-    
+
     const ul = document.getElementById("info");
-    if(ul.children.length === 1){ 
+    if(ul.children.length === 1){
         alert("Du kan ikke have mere end én info");
-        return; 
+        return;
     }
     for(let i = 0; i < info.length; i++) {
         const li = document.createElement("LI");
@@ -52,18 +52,19 @@ let sectorList = [];
 let selectedSectors = [];
 
 function getList(id) {
-         if( id.includes("education") ) { return eduList;    }
-    else if( id.includes(  "work"   ) ) { return workList;    }   
+    if( id.includes("education") ) { return eduList;    }
+    else if( id.includes(  "work"   ) ) { return workList;    }
     else if( id.includes( "sector"  ) ) { return sectorList; }
     else { alert("Der gik noget galt"); }
 }
 
 
 function createAccomplishment(formElement){
-    
+
     const accomplishment = formElement.getInput();
 
     const list = getList(formElement.id);
+    console.log(accomplishment);
     list.push(accomplishment);
     updateList(list);
 
@@ -84,7 +85,7 @@ function addSector(formElement){
     sectorList.push(selected.text);
     selected.disabled = true;
     selectedSectors.push(selected);
-    
+
     updateList(sectorList);
 }
 
@@ -93,12 +94,12 @@ function deleteListElement(id){
     const list = getList(id);
     const index = id.slice(-1);
     list.splice(id.slice(-1), 1 );
-    if(list == sectorList){ 
+    if(list == sectorList){
         deletedSector = selectedSectors[index];
         deletedSector.disabled = false;
         selectedSectors.splice(index,1);
     }
-    
+
     updateList(list);
 }
 
@@ -129,9 +130,10 @@ function updateList(list){
         if(list == sectorList){
             textNode = document.createTextNode(element)
         }else {
+            console.log(element);
             textNode = document.createTextNode(
-            kind + ": " + element.name + ", " + element.title 
-            + " " + element.from + " - " + element.to);
+                kind + ": " + element.place + ", " + element.type
+                + " " + element.from + " - " + element.to);
         }
 
         const button = document.createElement("button");

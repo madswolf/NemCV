@@ -21,9 +21,9 @@
 
 <ul class="center-content">
     <li>
-        <form-component onsubmit="getUserInfo(this); return false;">
+        <form-component onsubmit="validateUserInfo(this); return false;" id="info-form">
             <h1 slot="title">INFO</h1>
-            <form autocomplete="off" slot="form"  id="info-form">
+            <form autocomplete="off" slot="form">
 
                 <input-component id="name">
                     <span slot="hint">Navn</span>
@@ -31,7 +31,6 @@
                 </input-component>
 
                 <div>
-
                     <input-component id="age">
                         <span slot="hint">Alder</span>
                         <input class="input-number" slot="input" type="number" required>
@@ -41,9 +40,6 @@
                         <span slot="hint">By</span>
                         <input class="input-number" slot="input" type="text" required>
                     </input-component>
-
-
-
                 </div>
 
                 <input-component id="email">
@@ -60,14 +56,12 @@
                     <button class="button-small button-primary">GEM</button>
                 </div>
             </form>
-
+            <ul slot="list" id="info">
+            </ul>
         </form-component>
-        <ul id="info">
-        </ul>
     </li>
 
     <li>
-
         <form-component onsubmit="createAccomplishment(this); return false;" id="education-form">
             <h1 slot="title">UDDANNELSE</h1>
             <form slot="form">
@@ -95,9 +89,9 @@
                 </div>
                     <button class="button-primary button-small">TILFØJ</button>
             </form>
+            <ul slot="list" id="education-list">
+            </ul>
         </form-component>
-        <ul id="education-list">
-        </ul>
     </li>
 
     <li>
@@ -126,13 +120,13 @@
                     <input class="input-number" slot="input" type="number" required>
                 </input-component>
             </div>
-
                     <button class="button-primary button-small">TILFØJ</button>
             </form>
+            <ul slot="list" id="work-list">
+            </ul>
         </form-component>
-        <ul id="work-list">
-        </ul>
     </li>
+
     <li>
         <form-component onsubmit="getUserDescription(this); return false;" id="description-form">
             <h1 slot="title">FRITEKST</h1>

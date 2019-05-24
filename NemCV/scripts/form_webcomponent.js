@@ -126,7 +126,7 @@ class FormWebcomponent extends HTMLElement {
                 <slot name='form' id="form"></slot>
                 <slot name='add-button'></slot>
                 <button class="font button-close" onclick='dontShowContent(this)'>Luk</button>
-                <slot name="list"></slot>
+                <slot name="list" id="list"></slot>
             </div>`;
     }
 
