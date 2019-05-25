@@ -71,8 +71,8 @@ class FormWebcomponent extends HTMLElement {
                     background-color: white;
                     left: 3%;
                     right: 3%;
-                    top: 15%;
-                    bottom: 15%;
+                    top: 3%;
+                    bottom: 3%;  
                     position:absolute;
                     margin: auto;
                     flex-direction: column;
@@ -80,7 +80,7 @@ class FormWebcomponent extends HTMLElement {
                     border-radius: 50px;
                 }
                 
-                @media only screen and (min-width: 700px) {
+                @media only screen and (min-width: 600px) {
                 .content{
                     max-width: 500px;
                     min-width: 500px;
@@ -91,10 +91,13 @@ class FormWebcomponent extends HTMLElement {
                     }
                 }
                 
-                @media only screen and (max-height: 800px) {
-                .content{
-                        top: 3%;
-                        bottom: 3%;  
+                @media only screen and (min-height: 800px) {
+                .content{ 
+                        top: 20%;
+                        bottom: 15%; 
+                        min-height: 600px;
+                    max-height: 600px; 
+                    }
                     }
                 }
                 
