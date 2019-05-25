@@ -96,7 +96,7 @@
                 </div>
                     <button class="button-primary button-small">TILFØJ</button>
             </form>
-            <ul slot="list" id="education-list">
+            <ul slot="list" id="education-list" class="list-objects">
             </ul>
         </form-component>
     </li>
@@ -129,7 +129,9 @@
             </div>
                     <button class="button-primary button-small">TILFØJ</button>
             </form>
-            <ul slot="list" id="work-list">
+
+            <ul slot="list" id="work-list" class="list-objects">
+
             </ul>
         </form-component>
     </li>
@@ -146,6 +148,7 @@
             </form>
         </form-component>
     </li>
+
     <li>
         <form-component onsubmit="addSector(this); return false;" id="sector-form">
             <h1 slot="title">SEKTORER</h1>

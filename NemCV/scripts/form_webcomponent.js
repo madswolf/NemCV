@@ -78,7 +78,6 @@ class FormWebcomponent extends HTMLElement {
                     flex-direction: column;
                     align-items: center;
                     border-radius: 50px;
-                    overflow-y: auto;
                 }
                 
                 @media only screen and (min-width: 700px) {
@@ -92,7 +91,7 @@ class FormWebcomponent extends HTMLElement {
                     }
                 }
                 
-                @media only screen and (max-height: 700px) {
+                @media only screen and (max-height: 800px) {
                 .content{
                         top: 3%;
                         bottom: 3%;  

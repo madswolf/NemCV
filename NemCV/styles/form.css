@@ -108,3 +108,13 @@ select:focus{
 li{
     margin-top: 20px;
 }
+
+.list-objects {
+    margin-top: 20px;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);;
+    height: 210px;
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+
