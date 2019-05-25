@@ -3,24 +3,24 @@
 
 <html lang="da">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/generic.css">
+    <link rel="stylesheet" href="styles/cv.css">
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="scripts/createCV.js"></script>
+    <script src="scripts/form_webcomponent.js"></script>
 
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/variables.css">
-        <link rel="stylesheet" href="styles/generic.css">
-        <link rel="stylesheet" href="styles/cv.css">
+    <title>CV</title>
+        
+    </head>    
 
-        <script src="scripts/form_webcomponent.js"></script>
-
-        <title>CV</title>
-
-    </head>
-
-    <body>
+    <body onload="createCV()">
         <main class="content">
+            
 <!-- Picture -->
             <ul class="top">
                 <li>
