@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:100,400,600');
 
 :root {
-    --primary-color: rgb(55, 0, 179);
-    --secondary-color: #03DAC6;
-    --primary-secondary-color: #6200EE;
-    --secondary-secondary-color: #FFFFFF;
-    --secondary-variant-color: #018786;
+    --primary-color             : rgb(55, 0, 179);
+    --secondary-color           : #03DAC6;
+    --primary-secondary-color   : #6200EE;
+    --secondary-secondary-color : #FFFFFF;
+    --secondary-variant-color   : #018786;
+
+    --background: linear-gradient(to bottom right,
+    var(--primary-color),var(--secondary-color));
 
     /* h1:Headline large */
     --headline-large: 'Montserrat:700', sans-serif;
@@ -40,4 +43,3 @@
     /* input: text */
     --input-size: 20px;
 }
-
