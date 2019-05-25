@@ -122,7 +122,7 @@ function updateList(list){
     ul.innerHTML = "";
 
     let counter = 0;
-
+//boop
     for(let i = 0; i < list.length; i++) {
         const element = list[i];
         const newList = document.createElement("LI");
