@@ -21,7 +21,7 @@
 
 <ul class="center-content">
     <li>
-        <form-component onsubmit="validateUserInfo(this); return false;" id="info-form">
+        <form-component onsubmit="getUserInfo(this); return false;" id="info-form">
             <h1 slot="title">INFO</h1>
             <form autocomplete="off" slot="form">
 
@@ -66,12 +66,12 @@
             <h1 slot="title">UDDANNELSE</h1>
             <form slot="form">
 
-                <input-component name="input" id="place">
+                <input-component name="input" id="name">
                     <span slot="hint">Uddannelsessted</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component name="input" id="type">
+                <input-component name="input" id="title">
                     <span slot="hint">Title</span>
                     <input slot="input" type="text" required>
                 </input-component>
@@ -99,12 +99,12 @@
             <h1 slot="title">ERFARING</h1>
             <form slot="form">
 
-                <input-component name="input" id="place">
+                <input-component name="input" id="name">
                     <span slot="hint">Arbejdssted</span>
                     <input slot="input" type="text" required>
                 </input-component>
 
-                <input-component name="input" id="type">
+                <input-component name="input" id="title">
                     <span slot="hint">Stilling</span>
                     <input slot="input" type="text" required>
                 </input-component>
@@ -156,7 +156,7 @@
         </form-component>
     </li>
     <li>
-        <a href="TestCV.html"><h1>Se mit CV</h1></a>
+        <button onclick="createCvForValidation()">boobs</button>
     </li>
 </ul>
 
