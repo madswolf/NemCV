@@ -11,6 +11,26 @@ h1 {
     font-size: 30px;
 }
 
+/*----------------------------------------------------------------------------*\
+
+#BackBTN
+
+\*----------------------------------------------------------------------------*/
+
+.centered-button-box{
+    display: flex;
+    justify-content: center;
+
+}
+
+.centered-button {
+    margin: 20px;
+    height: 50px;
+    width: 200px;
+}
+
+
+
 .center-content li{
     display: flex;
     justify-content: center;
