@@ -132,7 +132,7 @@ function updateList(list){
         }else {
             console.log(element);
             textNode = document.createTextNode(
-                kind + ": " + element.place + ", " + element.type
+                kind + ": " + element.name + ", " + element.title
                 + " " + element.from + " - " + element.to);
         }
 
