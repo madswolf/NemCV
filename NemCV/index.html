@@ -1,55 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="da">
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/variables.css">
+        <link rel="stylesheet" href="styles/generic.css">
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
 
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Styles/reset.css">
-    <link rel="stylesheet" href="Styles/variables.css">
-    <link rel="stylesheet" type="text/css" href="Styles/index.css">
-    <title>nemCV</title>
+        <script src="scripts/input_webcomponent.js"></script>
 
-</head>
+        <title>nemCV</title>
+    </head>
 
-<body>
+    <body>
 
-<nav class="nav">
-    <ul>
-        <li><button class="item" onclick="location.href = '#section1';"></button></li>
-        <li><button class="item" onclick="location.href = '#section2';"></button></li>
-        <li><button class="item" onclick="location.href = '#section3';"></button></li>
-    </ul>
-</nav>
-
-
-<section class="section " id="section1">
-    <h1>Stuff</h1>
-    <img src="#" alt="Forside billede af 2 mennesker der giver hånd med nemCV's logo der står i midten">
+    <nav class="nav">
+        <ul class="progressbar">
+            <li><button class="item" id="nav-section1" onclick="onProgressBarClick(this.id)"></button></li>
+            <li><button class="item" id="nav-section2" onclick="onProgressBarClick(this.id)"></button></li>
+        </ul>
+    </nav>
 
 
-    <ul class="sellings-points">
-        <li class="selling-point">
-            Bæ
-        </li>
-        <li class="selling-point">
-            Orm
-        </li>
-        <li class="selling-point">
-            Gris
-        </li>
-    </ul>
+    <section class="section section1 center" id="section1">
 
-</section>
+        <div>
+        <object class="svg-banner" type="image/svg+xml" data="./resources/nemCV-hvid.svg">
+            Your browser does not support SVG
+        </object>
 
-<section class="section" id="section2">
-    <h1>Hello 2 My Friend </h1>
-</section>
+            <h1>Opret et CV hurtigt og nemt</h1>
 
-<section class="section" id="section3">
-    <h1>Hello 3 My Homie </h1>
-    <button onclick="window.location.href='form.html';">Kom igang</button>
-</section>
+        <ul class="selling-points-container">
+            <li class="selling-point">
+                <object class="sp-img" type="image/svg+xml" data="./resources/one.svg">
+                    Your browser does not support SVG
+                </object>
+                <p>Indtast dine oplysninger simpelt og nemt</p>
+            </li>
+            <li class="selling-point">
+                <object class="sp-img" type="image/svg+xml" data="./resources/two.svg">
+                    Your browser does not support SVG
+                </object>
+                <p>Opret og fremvis dit nye CV</p>
+            </li>
+            <li class="selling-point">
+                <object class="sp-img" type="image/svg+xml" data="./resources/three.svg">
+                    Your browser does not support SVG
+                </object>
+                <p>Få drømmejobbet</p>
+            </li>
+        </ul>
+        </div>
+    </section>
 
-</body>
+    <section class="section section2" id="section2">
+        <div class="centered-button-box">
+            <button class="centered-button" onclick="window.location.href='TestCV.html';">Se eksempel</button>
+            <button class="centered-button" onclick="window.location.href='form.html';">Kom igang</button>
+        </div>
+
+    </section>
+
+    <script src="scripts/index.js"></script>
+
+    </body>
 
 </html>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:100,400,600');
+
+:root {
+    --primary-color: rgb(55, 0, 179);
+    --secondary-color: #03DAC6;
+    --primary-secondary-color: #6200EE;
+    --secondary-secondary-color: #FFFFFF;
+    --secondary-variant-color: #018786;
+
+    /* h1:Headline large */
+    --headline-large: 'Montserrat:700', sans-serif;
+    --headline-large-size: 48px;
+    --headline-large-font-weight: 700;
+    --headline-large-letter-spaceing: 0rem;
+
+    /* h2:Headline small */
+    --headline-small: 'Montserrat:400', sans-serif;
+    --headline-small-size: 24px;
+    --headline-small-font-weight: 400;
+    --headline-small-letter-spaceing: 0rem;
+
+    /* h3: button */
+    --buttontext: 'Raleway:600', sans-serif;
+    --buttontext-size: 14px;
+    --buttontext-font-weight: 600;
+    --buttontext-letter-spaceing: 0.78rem;
+
+    /* h4:Caption */
+    --captiontext: 'Raleway:100', sans-serif;
+    --captiontext-size: 12px;
+    --captiontext-font-weight: 100;
+    --captiontext-letter-spaceing: 0.24rem;
+
+    /* p:Body text */
+    --bodytext: 'Raleway:400', sans-serif;
+    --bodytext-size: 14px;
+    --bodytext-font-weight: 400;
+    --bodytext-letter-spaceing: 0.016rem;
+
+    /* input: text */
+    --input-size: 20px;
+}
+

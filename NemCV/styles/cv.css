@@ -1,0 +1,197 @@
+
+
+/*----------------------------------------------------------------------------*\
+
+#CONTENT
+
+\*----------------------------------------------------------------------------*/
+
+
+body {
+    width: 100%;
+    background-color: rgb(27,29,30, 0.5);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: auto;
+    height: auto;
+}
+
+section {
+    margin-top: 10px;
+}
+
+.content {
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(27,29,30, 0.5);
+    width: 80%;
+}
+
+.picture-container {
+    margin: auto;
+    width: 60%;
+    height: 30%;
+}
+
+.CV-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+/*----------------------------------------------------------------------------*\
+
+#BackBTN
+
+\*----------------------------------------------------------------------------*/
+
+
+
+.centered-button-box{
+    display: flex;
+    justify-content: center;
+
+}
+
+.centered-button {
+    margin: 20px;
+    height: 50px;
+    width: 200px;
+}
+
+/*----------------------------------------------------------------------------*\
+
+#TYPEOGRAFY
+
+\*----------------------------------------------------------------------------*/
+
+p {
+    margin: 20px;
+    color: black;
+    font-size: 100%;
+}
+
+h1{
+  display: none;
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+#ICONS
+
+\*----------------------------------------------------------------------------*/
+
+
+.flex-icongrafics {
+    display: flex;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.icon {
+  height: 120%;
+  width: auto;
+  margin-right: 5px;
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+#SVG
+
+\*----------------------------------------------------------------------------*/
+
+
+
+.svg-line {
+    padding: 0;
+    margin: 0;
+    color: black;
+    margin-top: 10px;
+}
+
+line{
+  stroke: black;
+  stroke-width: 10px;
+}
+
+/*----------------------------------------------------------------------------*\
+
+#CONTENT POSITIONING
+
+\*----------------------------------------------------------------------------*/
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.columns .column-head .row1, .columns .column-head .row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.columns .column-head .row1 .item , .columns .column-head .row2 .item {
+    width: 50%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns .column-head .row2 .item .sector-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.columns .columns-bottom {
+    width: 100%;
+}
+
+
+.border{
+  border-left: 1px solid black;
+}
+/*----------------------------------------------------------------------------*\
+
+#LIST
+
+\*----------------------------------------------------------------------------*/
+
+.info {
+  list-style-type: none;
+  margin-left: 20px;
+
+}
+
+/*----------------------------------------------------------------------------*\
+
+#MEDIA QUERY
+
+\*----------------------------------------------------------------------------*/
+
+
+
+@media only screen and (max-width: 700px) {
+
+    .columns .column-head .row1, .columns .column-head .row2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .border{
+      border-left: none;
+    }
+
+    .columns .column-head .row1 .item , .columns .column-head .row2 .item {
+        width: 100%;
+    }
+}

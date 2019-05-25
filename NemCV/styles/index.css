@@ -1,0 +1,194 @@
+
+body {
+    background-image: linear-gradient(-50deg,
+    var(--secondary-color),  var(--primary-color));
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+    body {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+h1{
+    font-size: 40px;
+}
+
+
+
+/*----------------------------------------------------------------------------*\
+
+#NAVIGATION
+
+\*----------------------------------------------------------------------------*/
+
+.nav {
+    background-color: transparent;
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    margin-top: -55px;
+}
+
+.nav .item {
+    height: 30px;
+    width: 30px;
+    border: var(--secondary-secondary-color) solid 2px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 10px;
+    padding: 0;
+}
+
+.nav .in-viewport {
+    background: var(--secondary-secondary-color);
+}
+
+/*----------------------------------------------------------------------------*\
+
+#SECTION
+
+\*----------------------------------------------------------------------------*/
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*----------------------------------------------------------------------------*\
+
+#BUTTONS
+
+\*----------------------------------------------------------------------------*/
+
+.centered-button{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 200px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .centered-button{
+        font-size: 30px;
+        padding: 30px;
+    }
+}
+
+.centered-button-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+
+/*----------------------------------------------------------------------------*\
+
+#PICTURE
+
+\*----------------------------------------------------------------------------*/
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.svg-banner{
+    padding-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+/*----------------------------------------------------------------------------\
+
+ #SELLINGPOINTS
+
+ *----------------------------------------------------------------------------*/
+
+.selling-points-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.selling-point {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+}
+
+.sp-img {
+    height: 150px;
+}
+
+.selling-point p{
+    font-size: var(--input-size);
+}
+
+
+/*----------------------------------------------------------------------------\
+
+ #MEDIA QUERIES
+
+*----------------------------------------------------------------------------*/
+
+ @media only screen and (max-width: 800px) {
+
+   .selling-points-container {
+       display: flex;
+       flex-direction: column;
+   }
+   .sp-img {
+       height: 120px;
+       object-fit: contain;
+       margin-bottom: 10px;
+   }
+   .selling-point {
+       width: 50%;
+       align-self: center;
+   }
+
+     h1{
+         font-size: 30px;
+     }
+
+     .svg-banner{
+         margin-right: 20px;
+         margin-left: 20px;
+     }
+ }
+
+@media only screen and (max-width: 600px) {
+  .section h1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+}
+
