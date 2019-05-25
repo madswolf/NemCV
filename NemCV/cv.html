@@ -3,160 +3,153 @@
 
 <html lang="da">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/variables.css">
-    <script src="scripts/form_webcomponent.js"></script>
-    <link rel="stylesheet" href="styles/generic.css">
-    <link rel="stylesheet" href="styles/cv.css">
+    <head>
 
-    <title>CV</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-</head>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/variables.css">
+        <link rel="stylesheet" href="styles/generic.css">
+        <link rel="stylesheet" href="styles/cv.css">
 
-<body>
-    <main class="content">
+        <script src="scripts/form_webcomponent.js"></script>
 
+        <title>CV</title>
+
+    </head>
+
+    <body>
+        <main class="content">
 <!-- Picture -->
-<ul class="top">
-  <li>
-    <section class="picture-container">
-    <h1>Billede af dig</h1>
-    <img class="CV-picture" id="picture" src="./resources/cv/profilePicture.png" alt="billede af dig">
-    </section>
-  </li>
+            <ul class="top">
+                <li>
+                    <section class="picture-container">
+                    <img class="CV-picture" id="picture" src="./resources/cv/profilePicture.png" alt="billede af dig">
+                    </section>
+                </li>
 
-  <li>
-    <!-- Basic Info -->
-            <section>
-                <h1> Grundlæggende information</h1>
-                <figure class="flex-icongrafics">
-                  <img class="icon" src="./resources/cv/person.svg"
-                  alt="person">
-                  <svg width="100%" viewBox="0 0 100 100"
-                  preserveAspectRatio="none" class="svg-line">
-                        <line x1="0" y1="0" x2="100%" y2="0" />
-                  </svg>
-                </figure>
+<!-- Basic Info -->
+                <li>
+                  <section>
 
-                  <ul class="info">
-                      <li class="info-items">
                           <figure class="flex-icongrafics">
-                                <img class="icon" src="./resources/cv/face.svg"
-                                alt="ansigt">
-                         </figure>
-                         <p id="name">Navn:</p>
-                      </li>
-
-                       <li class="info-items">
-                           <figure class="flex-icongrafics">
-                                 <img class="icon" src="./resources/cv/cake.svg"
-                                 alt="kage">
+                              <img class="icon" src="./resources/cv/person.svg" alt="person">
+                                <svg width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-line">
+                                  <line x1="0" y1="0" x2="100%" y2="0" />
+                                </svg>
                           </figure>
-                          <p id="age">Alder:</p>
-                       </li>
 
-                       <li class="info-items">
-                           <figure class="flex-icongrafics">
-                                 <img class="icon" src="./resources/cv/email.svg"
-                                 alt="e-mail">
-                          </figure>
-                          <p id="email">E-mail:</p>
-                       </li>
+                          <ul class="info">
+                              <li class="info-items">
+                                  <figure class="flex-icongrafics">
+                                      <img class="icon" src="./resources/cv/face.svg" alt="ansigt">
+                                  </figure>
 
-                       <li class="info-items">
-                           <figure class="flex-icongrafics">
-                                 <img class="icon" src="./resources/cv/city.svg"
-                                 alt="by">
-                          </figure>
-                          <p id="city">By:</p>
-                       </li>
-                  </ul>
-            </section>
-          </li>
-</ul>
+                                  <p id="name">Navn:</p>
+                              </li>
+
+                              <li class="info-items">
+                                  <figure class="flex-icongrafics">
+                                      <img class="icon" src="./resources/cv/cake.svg" alt="kage">
+                                  </figure>
+
+                                  <p id="age">Alder:</p>
+                              </li>
+
+                              <li class="info-items">
+                                  <figure class="flex-icongrafics">
+                                      <img class="icon" src="./resources/cv/email.svg" alt="e-mail">
+                                  </figure>
+
+                                  <p id="email">E-mail:</p>
+                              </li>
+
+                              <li class="info-items">
+                                  <figure class="flex-icongrafics">
+                                      <img class="icon" src="./resources/cv/city.svg" alt="by">
+                                  </figure>
+
+                                  <p id="city">By:</p>
+                              </li>
+                          </ul>
+                  </section>
+                </li>
+            </ul>
 
 <!-- Current Postion -->
-        <section>
-          <h1>Nuværende job</h1>
-          <figure class="flex-icongrafics">
-              <img class="icon" src="./resources/cv/currentJob.svg"
-              alt="skrue nøgle">
+            <section>
 
-              <svg width="100%" viewBox="0 0 100 100"
-              preserveAspectRatio="none" class="svg-line">
-                    <line x1="0" y1="0" x2="100%" y2="0" />
-              </svg>
-          </figure>
-          <ul id="current-work"></ul>
+                    <figure class="flex-icongrafics">
+                        <img class="icon" src="./resources/cv/currentJob.svg" alt="skrue nøgle">
 
-          </section>
+                        <svg width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-line">
+                            <line x1="0" y1="0" x2="100%" y2="0" />
+                        </svg>
+                    </figure>
+
+                    <ul id="current-work"></ul>
+
+            </section>
 
 <!-- Sector -->
 
-        <section>
-          <h1>Sektor </h1>
-          <figure class="flex-icongrafics">
-            <img class="icon" src="./resources/cv/sector.svg"
-            alt="en by som symbolisere en sector">
-            <svg width="100%" viewBox="0 0 100 100"
-            preserveAspectRatio="none" class="svg-line">
-                  <line x1="0" y1="0" x2="100%" y2="0" />
-            </svg>
-          </figure>
-          <ul id="sector">
-          </ul>
+            <section>
 
-        </section>
+                <figure class="flex-icongrafics">
+                    <img class="icon" src="./resources/cv/sector.svg" alt="en by som symbolisere en sector">
+
+                    <svg width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-line">
+                        <line x1="0" y1="0" x2="100%" y2="0" />
+                    </svg>
+                </figure>
+
+                <ul id="sector"></ul>
+
+            </section>
 
 <!-- Education -->
-        <section>
-          <h1>Uddannelse </h1>
-          <figure class="flex-icongrafics">
-              <img class="icon" src="./resources/cv/school.svg"
-              alt="Studenterhue">
+            <section>
 
-              <svg width="100%" viewBox="0 0 100 100"
-            preserveAspectRatio="none" class="svg-line">
-              <line x1="0" y1="0" x2="100%" y2="0" />
-              </svg>
-          </figure>
-          <ul id="education">
-          </ul>
+                <figure class="flex-icongrafics">
+                    <img class="icon" src="./resources/cv/school.svg" alt="Studenterhue">
+                        <svg width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-line">
+                            <line x1="0" y1="0" x2="100%" y2="0" />
+                        </svg>
+                </figure>
 
-        </section>
+                <ul id="education"></ul>
+
+            </section>
 
 <!-- Earlier workplaces -->
-          <section class="earlier-workplaces">
-            <h1>Erfaring </h1>
-            <figure class="flex-icongrafics">
-              <img class="icon" src="./resources/cv/work.svg"
-              alt="kuffert">
-              <svg width="100%" viewBox="0 0 100 100"
-              preserveAspectRatio="none" class="svg-line">
-                  <line x1="0" y1="0" x2="100%" y2="0" />
-              </svg>
-            </figure>
+            <section class="earlier-workplaces">
 
-            <ul id="work"></ul>
-          </section>
+                <figure class="flex-icongrafics">
+                    <img class="icon" src="./resources/cv/work.svg" alt="kuffert">
+                        <svg width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-line">
+                            <line x1="0" y1="0" x2="100%" y2="0" />
+                        </svg>
+                </figure>
+
+                <ul id="work"></ul>
+
+             </section>
 
 <!-- Free Text-->
-          <section>
-            <h1>Fri tekst</h1>
-            <figure class="flex-icongrafics">
-              <img class="icon" src="./resources/cv/freeText.svg"
-              alt="Klodser">
-              <svg width="100%" viewBox="0 0 100 100"
-              preserveAspectRatio="none" class="svg-line">
-                  <line x1="0" y1="0" x2="100%" y2="0" />
-              </svg>
-            </figure>
+             <section>
 
-             <p id="description">Her kan jeg skrive ekstra stuff om mig selv</p>
-          </section>
-      </main>
+                    <figure class="flex-icongrafics">
+                        <img class="icon" src="./resources/cv/freeText.svg" alt="Klodser">
+
+                        <svg width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg-line">
+                            <line x1="0" y1="0" x2="100%" y2="0" />
+                        </svg>
+                    </figure>
+
+                    <p id="description">Her kan jeg skrive ekstra stuff om mig selv</p>
+              </section>
+
+        </main>
     </body>
 </html>

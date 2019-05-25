@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="da">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,62 +11,66 @@
         <link rel="stylesheet" type="text/css" href="styles/index.css">
 
         <script src="scripts/input_webcomponent.js"></script>
+        <script src="scripts/index.js" defer></script>
 
         <title>nemCV</title>
     </head>
 
     <body>
 
-    <nav class="nav">
-        <ul class="progressbar">
-            <li><button class="item" id="nav-section1" onclick="onProgressBarClick(this.id)"></button></li>
-            <li><button class="item" id="nav-section2" onclick="onProgressBarClick(this.id)"></button></li>
-        </ul>
-    </nav>
+<!-- Dot navigation -->
+      <nav class="nav">
+          <ul class="progressbar">
+              <li><button class="item" id="nav-section1" onclick="onProgressBarClick(this.id)"></button></li>
+              <li><button class="item" id="nav-section2" onclick="onProgressBarClick(this.id)"></button></li>
+          </ul>
+      </nav>
 
-
-    <section class="section section1 center" id="section1">
+      <section class="section section1 center" id="section1">
 
         <div>
-        <object class="svg-banner" type="image/svg+xml" data="./resources/nemCV-hvid.svg">
+            <object class="svg-banner" type="image/svg+xml" data="./resources/nemCV-hvid.svg">
             Your browser does not support SVG
-        </object>
+            </object>
 
             <h1>Opret et CV hurtigt og nemt</h1>
 
-        <ul class="selling-points-container">
-            <li class="selling-point">
-                <object class="sp-img" type="image/svg+xml" data="./resources/one.svg">
-                    Your browser does not support SVG
-                </object>
-                <p>Indtast dine oplysninger simpelt og nemt</p>
-            </li>
-            <li class="selling-point">
-                <object class="sp-img" type="image/svg+xml" data="./resources/two.svg">
-                    Your browser does not support SVG
-                </object>
-                <p>Opret og fremvis dit nye CV</p>
-            </li>
-            <li class="selling-point">
-                <object class="sp-img" type="image/svg+xml" data="./resources/three.svg">
-                    Your browser does not support SVG
-                </object>
-                <p>Få drømmejobbet</p>
-            </li>
-        </ul>
-        </div>
-    </section>
+            <ul class="tutorial-points-container">
+                <li class="tutorial-point">
+                    <object class="sp-img" type="image/svg+xml" data="./resources/one.svg">
+                          Your browser does not support SVG
+                     </object>
 
-    <section class="section section2" id="section2">
-        <div class="centered-button-box">
-            <button class="centered-button" onclick="window.location.href='TestCV.html';">Se eksempel</button>
-            <button class="centered-button" onclick="window.location.href='form.html';">Kom igang</button>
-        </div>
+                     <p>Indtast dine oplysninger simpelt og nemt</p>
+                </li>
 
-    </section>
+                <li class="tutorial-point">
+                     <object class="sp-img" type="image/svg+xml" data="./resources/two.svg">
+                          Your browser does not support SVG
+                     </object>
 
-    <script src="scripts/index.js"></script>
+                     <p>Opret og fremvis dit nye CV</p>
+                </li>
 
+                <li class="tutorial-point">
+                    <object class="sp-img" type="image/svg+xml" data="./resources/three.svg">
+                          Din browser understøtter ikke SVG
+                    </object>
+
+                    <p>Få drømmejobbet</p>
+                </li>
+             </ul>
+          </div>
+
+       </section>
+
+       <section class="section section2" id="section2">
+
+           <div class="centered-button-box">
+               <button class="centered-button" onclick="window.location.href='TestCV.html';">Se eksempel</button>
+               <button class="centered-button" onclick="window.location.href='form.html';">Kom igang</button>
+           </div>
+
+       </section>
     </body>
-
 </html>

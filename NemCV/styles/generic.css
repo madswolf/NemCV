@@ -111,9 +111,7 @@ input:focus{
 .input-number{
     width: 140px;
 }
-.invisible-title{
-  display: none;
-}
+
 
 path{
     fill: white;
