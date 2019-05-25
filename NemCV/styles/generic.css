@@ -118,3 +118,12 @@ input:focus{
 path{
     fill: white;
 }
+
+.svg-btn{
+    border-style: none;
+    border-radius: 0;
+}
+
+.svg-btn:hover{
+    background-color: transparent;
+}

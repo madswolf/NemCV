@@ -19,7 +19,14 @@
 </head>
 <body>
 
+<button class="centered-button svg-btn" onclick="window.location.href='index.html';">
+    <object style="pointer-events: none" type="image/svg+xml" data="./resources/nemCV-hvid.svg">
+        Your browser does not support SVG
+    </object>
+</button>
+
 <ul class="center-content">
+
     <li>
         <form-component onsubmit="getUserInfo(this); return false;" id="info-form">
             <h1 slot="title">INFO</h1>
