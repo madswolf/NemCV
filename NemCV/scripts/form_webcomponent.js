@@ -68,7 +68,6 @@ class FormWebcomponent extends HTMLElement {
                 .content {
                     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
                     display: none;
-                    overflow: hidden;
                     background-color: white;
                     left: 3%;
                     right: 3%;
@@ -92,9 +91,9 @@ class FormWebcomponent extends HTMLElement {
                     }
                 }
                 
-                @media only screen and (max-height: 700px) {
+                @media only screen and (max-height: 800px) {
                 .content{
-                      top: 3%;
+                        top: 3%;
                         bottom: 3%;  
                     }
                 }

@@ -12,9 +12,10 @@ body {
 }
 
 
+
 /*----------------------------------------------------------------------------*\
 
-#TYPOGRAPHY
+#TYPEOGRAFY
 
 \*----------------------------------------------------------------------------*/
 
@@ -59,13 +60,6 @@ p{
     font-weight: var(--bodytext-font-weight) ;
     letter-spacing: var(--bodytext-letter-spaceing);
 }
-
-/*----------------------------------------------------------------------------*\
-
-#BUTTON
-
-\*----------------------------------------------------------------------------*/
-
 
 button{
     font-family: var(--headline-large);
@@ -141,4 +135,13 @@ input:focus{
 
 path{
     fill: white;
+}
+
+.svg-btn{
+    border-style: none;
+    border-radius: 0;
+}
+
+.svg-btn:hover{
+    background-color: transparent;
 }

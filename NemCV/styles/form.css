@@ -66,3 +66,55 @@ select{
 select:focus{
     outline: 0;
 }
+
+.svg-btn{
+    position: absolute;
+    border-style: none;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+}
+
+.delete-btn{
+    color: var(--primary-color);
+    border-style: none;
+    padding: 0;
+    padding-left: 8px;
+}
+
+
+.delete-btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.center-text{
+    color: var(--primary-color);
+    align-self: center;
+    padding: 8px;
+}
+
+.list-div{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    width: 300px;
+}
+
+li{
+    margin-top: 20px;
+}
+
+.list-objects {
+    margin-top: 20px;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);;
+    height: 210px;
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+
