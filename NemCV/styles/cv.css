@@ -6,7 +6,6 @@
 
 \*----------------------------------------------------------------------------*/
 
-
 body {
     width: 100%;
     background-color: rgb(27,29,30, 0.5);
@@ -23,9 +22,26 @@ section {
 .content {
     margin: auto;
     background-color: white;
-    padding: 20px;
+    padding: 50px;
     box-shadow: 10px 10px 5px rgb(27,29,30, 0.5);
-    width: 80%;
+    width: 495px;
+    height: 742px;
+
+}
+
+/*----------------------------------------------------------------------------*\
+
+#TOP-CONTENT
+
+\*----------------------------------------------------------------------------*/
+.top {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+}
+.top li{
+  width: 50%;
 }
 
 .picture-container {
@@ -38,7 +54,27 @@ section {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 100%;
+}
+
+/*----------------------------------------------------------------------------*\
+
+#BackBTN
+
+\*----------------------------------------------------------------------------*/
+
+
+
+.centered-button-box{
+    display: flex;
+    justify-content: center;
+
+}
+
+.centered-button {
+    margin: 20px;
+    height: 50px;
+    width: 200px;
 }
 
 /*----------------------------------------------------------------------------*\
@@ -69,13 +105,16 @@ h1{
     display: flex;
     height: 40px;
     margin-bottom: 10px;
+
 }
 
 .icon {
-  height: 120%;
+  height: 90%;
   width: auto;
   margin-right: 5px;
 }
+
+
 
 
 /*----------------------------------------------------------------------------*\
@@ -104,38 +143,6 @@ line{
 
 \*----------------------------------------------------------------------------*/
 
-.columns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.columns .column-head .row1, .columns .column-head .row2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.columns .column-head .row1 .item , .columns .column-head .row2 .item {
-    width: 50%;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.columns .column-head .row2 .item .sector-position {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.columns .columns-bottom {
-    width: 100%;
-}
-
-
 .border{
   border-left: 1px solid black;
 }
@@ -148,7 +155,14 @@ line{
 .info {
   list-style-type: none;
   margin-left: 20px;
+}
 
+.info-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 50%;
 }
 
 /*----------------------------------------------------------------------------*\
@@ -160,18 +174,16 @@ line{
 
 
 @media only screen and (max-width: 700px) {
+  .top{
+      flex-direction: column;
+  }
 
-    .columns .column-head .row1, .columns .column-head .row2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+  .top li{
+      width: 100%;
+  }
+  .content{
+    height: auto;
+    width: 70%;
+  }
 
-    .border{
-      border-left: none;
-    }
-
-    .columns .column-head .row1 .item , .columns .column-head .row2 .item {
-        width: 100%;
-    }
 }

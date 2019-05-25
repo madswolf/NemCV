@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/generic.css">
@@ -16,65 +16,69 @@
     <title>CV</title>
 
 </head>
-    <body onload="createCV()">
 
-<!-- main -->
-      <main class="content">
+
+<body onload="createCV()">
+    <main class="content">
 
 <!-- Picture -->
-        <section class="picture-container" >
-        <h1>Billede af dig</h1>
-        <img class="CV-picture" id="picture" src="./resources/cv/profilePicture.png" alt="billede af dig">
-        </section>
+<ul class="top">
+  <li>
+    <section class="picture-container">
+    <h1>Billede af dig</h1>
+    <img class="CV-picture" id="picture" src="./resources/cv/profilePicture.png" alt="billede af dig">
+    </section>
+  </li>
 
-<!-- Basic Info -->
-        <section>
-            <h1> Grundlæggende information</h1>
-            <figure class="flex-icongrafics">
-              <img class="icon" src="./resources/cv/person.svg"
-              alt="person">
-              <svg width="100%" viewBox="0 0 100 100"
-              preserveAspectRatio="none" class="svg-line">
-                    <line x1="0" y1="0" x2="100%" y2="0" />
-              </svg>
-            </figure>
+  <li>
+    <!-- Basic Info -->
+            <section>
+                <h1> Grundlæggende information</h1>
+                <figure class="flex-icongrafics">
+                  <img class="icon" src="./resources/cv/person.svg"
+                  alt="person">
+                  <svg width="100%" viewBox="0 0 100 100"
+                  preserveAspectRatio="none" class="svg-line">
+                        <line x1="0" y1="0" x2="100%" y2="0" />
+                  </svg>
+                </figure>
 
-              <ul class="info">
-                   <li class="info_items">
-                       <figure class="flex-icongrafics">
-                             <img class="icon" src="./resources/cv/face.svg"
-                             alt="ansigt">
+                  <ul class="info">
+                      <li class="info-items">
+                          <figure class="flex-icongrafics">
+                                <img class="icon" src="./resources/cv/face.svg"
+                                alt="ansigt">
+                         </figure>
+                         <p id="name">Navn:</p>
+                      </li>
 
-                             <p id="name">Navn:</p>
-                        </figure>
-                   </li>
+                       <li class="info-items">
+                           <figure class="flex-icongrafics">
+                                 <img class="icon" src="./resources/cv/cake.svg"
+                                 alt="kage">
+                          </figure>
+                          <p id="age">Alder:</p>
+                       </li>
 
+                       <li class="info-items">
+                           <figure class="flex-icongrafics">
+                                 <img class="icon" src="./resources/cv/email.svg"
+                                 alt="e-mail">
+                          </figure>
+                          <p id="email">E-mail:</p>
+                       </li>
 
-                   <li class="info-items">
-                       <figure class="flex-icongrafics">
-                             <img class="icon" src="./resources/cv/cake.svg"
-                             alt="kage">
-                             <p id="age">Alder:</p>
-                      </figure>
-                   </li>
-
-                   <li class="info_items">
-                       <figure class="flex-icongrafics">
-                           <img class="icon" src="./resources/cv/email.svg"
-                           alt="e-mail">
-                           <p id="email">E-mail:</p>
-                       </figure>
-                   </li>
-
-                   <li class="info_items">
-                     <figure class="flex-icongrafics">
-                         <img class="icon" src="./resources/cv/city.svg"
-                         alt="by">
-                         <p id="city">By:</p>
-                     </figure>
-                   </li>
-              </ul>
-        </section>
+                       <li class="info-items">
+                           <figure class="flex-icongrafics">
+                                 <img class="icon" src="./resources/cv/city.svg"
+                                 alt="by">
+                          </figure>
+                          <p id="city">By:</p>
+                       </li>
+                  </ul>
+            </section>
+          </li>
+</ul>
 
 <!-- Current Postion -->
         <section>
@@ -88,9 +92,8 @@
                     <line x1="0" y1="0" x2="100%" y2="0" />
               </svg>
           </figure>
-
-            <ul id="current-work"></ul>
-        </section>
+          <ul id="current-work"></ul>
+          </section>
 
 <!-- Sector -->
 
@@ -104,8 +107,9 @@
                   <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
           </figure>
+          <ul id="sector">
+          </ul>
 
-          <ul id="sector"></ul>
         </section>
 
 <!-- Education -->
@@ -120,8 +124,8 @@
               <line x1="0" y1="0" x2="100%" y2="0" />
               </svg>
           </figure>
-
-            <ul id="education"></ul>
+          <ul id="education">
+          </ul>
         </section>
 
 <!-- Earlier workplaces -->
@@ -136,13 +140,12 @@
               </svg>
             </figure>
 
-
-              <ul id="work"></ul>
+            <ul id="work"></ul>
           </section>
 
 <!-- Free Text-->
           <section>
-            <h1>Fri text</h1>
+            <h1>Fri tekst</h1>
             <figure class="flex-icongrafics">
               <img class="icon" src="./resources/cv/freeText.svg"
               alt="Klodser">
