@@ -113,3 +113,7 @@ input:focus{
 .invisible-title{
   display: none;
 }
+
+path{
+    fill: white;
+}
