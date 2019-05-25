@@ -123,38 +123,6 @@ line{
 
 \*----------------------------------------------------------------------------*/
 
-.columns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.columns .column-head .row1, .columns .column-head .row2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.columns .column-head .row1 .item , .columns .column-head .row2 .item {
-    width: 50%;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.columns .column-head .row2 .item .sector-position {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.columns .columns-bottom {
-    width: 100%;
-}
-
-
 .border{
   border-left: 1px solid black;
 }
@@ -186,18 +154,16 @@ line{
 
 
 @media only screen and (max-width: 700px) {
+  .top{
+      flex-direction: column;
+  }
 
-    .columns .column-head .row1, .columns .column-head .row2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+  .top li{
+      width: 100%;
+  }
+  .content{
+    height: auto;
+    width: 70%;
+  }
 
-    .border{
-      border-left: none;
-    }
-
-    .columns .column-head .row1 .item , .columns .column-head .row2 .item {
-        width: 100%;
-    }
 }
