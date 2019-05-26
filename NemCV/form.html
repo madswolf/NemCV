@@ -1,174 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/generic.css">
-    <link rel="stylesheet" type="text/css" href="styles/form.css">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/variables.css">
+        <link rel="stylesheet" href="styles/generic.css">
+        <link rel="stylesheet" type="text/css" href="styles/form.css">
 
-    <script src="scripts/form_webcomponent.js"></script>
-    <script type="text/javascript" src="scripts/userinput-handling.js" defer></script>
-    <script type="text/javascript" src="scripts/api.js" defer></script>
-    <script src="scripts/input_webcomponent.js"></script>
+        <script src="scripts/form_webcomponent.js"></script>
+        <script type="text/javascript" src="scripts/userinput-handling.js" defer></script>
+        <script type="text/javascript" src="scripts/api.js" defer></script>
+        <script src="scripts/input_webcomponent.js"></script>
 
-    <title>Form</title>
-</head>
-<body>
+        <title>Form</title>
+    </head>
 
-<button class="centered-button svg-btn" onclick="window.location.href='index.html';">
-    <object style="pointer-events: none" type="image/svg+xml" data="./resources/nemCV-hvid.svg">
-        Your browser does not support SVG
-    </object>
-</button>
+    <body>
 
-<ul class="center-content">
+        <button class="centered-button svg-btn" onclick="window.location.href='index.html';">
+            <object style="pointer-events: none" type="image/svg+xml" data="./resources/nemCV-hvid.svg">
+                Your browser does not support SVG
+            </object>
+        </button>
 
-    <li>
-        <form-component onsubmit="getUserInfo(this); return false;" id="info-form">
-            <h1 slot="title">INFO</h1>
-            <form autocomplete="off" slot="form">
+        <ul class="center-content">
 
-                <input-component id="name">
-                    <span slot="hint">Navn</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+            <li>
+                <form-component onsubmit="getUserInfo(this); return false;" id="info-form">
 
-                <div>
-                    <input-component id="age">
-                        <span slot="hint">Alder</span>
-                        <input class="input-number" slot="input" type="number" required>
-                    </input-component>
+                    <h1 slot="title">INFO</h1>
 
-                    <input-component id="city">
-                        <span slot="hint">By</span>
-                        <input class="input-number" slot="input" type="text" required>
-                    </input-component>
-                </div>
+                    <form autocomplete="off" slot="form">
 
-                <input-component id="email">
-                    <span slot="hint">Email</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                        <input-component id="name">
+                            <span slot="hint">Navn</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
 
-                <input-component id="picture">
-                    <span slot="hint">Billede URL</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                        <div>
+                            <input-component id="age">
+                                <span slot="hint">Alder</span>
+                                <input class="input-number" slot="input" type="number" required>
+                            </input-component>
 
-                <div>
-                    <button class="button-small button-primary">GEM</button>
-                </div>
-            </form>
-            <ul slot="list" id="info">
-            </ul>
-        </form-component>
-    </li>
+                            <input-component id="city">
+                                <span slot="hint">By</span>
+                                <input class="input-number" slot="input" type="text" required>
+                            </input-component>
+                        </div>
 
-    <li>
-        <form-component onsubmit="createAccomplishment(this); return false;" id="education-form">
-            <h1 slot="title">UDDANNELSE</h1>
-            <form slot="form">
+                        <input-component id="email">
+                            <span slot="hint">Email</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
 
-                <input-component name="input" id="name">
-                    <span slot="hint">Uddannelsessted</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                        <input-component id="picture">
+                            <span slot="hint">Billede URL</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
 
-                <input-component name="input" id="title">
-                    <span slot="hint">Title</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                        <div>
+                            <button class="button-small button-primary">GEM</button>
+                        </div>
+                    </form>
 
-                <div>
-                <input-component name="input" id="from">
-                    <span slot="hint">Start år</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
+                    <ul slot="list" id="info"></ul>
+                </form-component>
+            </li>
 
-                <input-component name="input" id="to">
-                    <span slot="hint">Slut år</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
-                </div>
-                    <button class="button-primary button-small">TILFØJ</button>
-            </form>
-            <ul slot="list" id="education-list" class="list-objects">
-            </ul>
-        </form-component>
-    </li>
+            <li>
+                <form-component onsubmit="createAccomplishment(this); return false;" id="education-form">
 
-    <li>
-        <form-component onsubmit="createAccomplishment(this); return false;" id="work-form">
-            <h1 slot="title">ERFARING</h1>
-            <form slot="form">
+                    <h1 slot="title">UDDANNELSE</h1>
 
-                <input-component name="input" id="name">
-                    <span slot="hint">Arbejdssted</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                    <form slot="form">
 
-                <input-component name="input" id="title">
-                    <span slot="hint">Stilling</span>
-                    <input slot="input" type="text" required>
-                </input-component>
+                        <input-component name="input" id="name">
+                            <span slot="hint">Uddannelsessted</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
 
-                <div>
-                <input-component name="input" id="from">
-                    <span slot="hint">Start år</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
+                        <input-component name="input" id="title">
+                            <span slot="hint">Title</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
 
-                <input-component name="input" id="to">
-                    <span slot="hint">Slut år</span>
-                    <input class="input-number" slot="input" type="number" required>
-                </input-component>
-            </div>
-                    <button class="button-primary button-small">TILFØJ</button>
-            </form>
+                        <div>
+                        <input-component name="input" id="from">
+                            <span slot="hint">Start år</span>
+                            <input class="input-number" slot="input" type="number" required>
+                        </input-component>
 
-            <ul slot="list" id="work-list" class="list-objects">
+                        <input-component name="input" id="to">
+                            <span slot="hint">Slut år</span>
+                            <input class="input-number" slot="input" type="number" required>
+                        </input-component>
+                        </div>
+                            <button class="button-primary button-small">TILFØJ</button>
+                    </form>
 
-            </ul>
-        </form-component>
-    </li>
+                    <ul slot="list" id="education-list" class="list-objects"></ul>
+                </form-component>
+            </li>
 
-    <li>
-        <form-component onsubmit="getUserDescription(this); return false;" id="description-form">
-            <h1 slot="title">FRITEKST</h1>
-            <form slot="form">
-                <input-component>
-                    <span slot="hint">Fritekst</span>
-                    <textarea slot="input" rows="20" cols="50" ></textarea>
-                </input-component>
-                <button class="button-primary">GEM</button>
-            </form>
-        </form-component>
-    </li>
+            <li>
+                <form-component onsubmit="createAccomplishment(this); return false;" id="work-form">
 
-    <li>
-        <form-component onsubmit="addSector(this); return false;" id="sector-form">
-            <h1 slot="title">SEKTORER</h1>
-            <form slot="form">
-                <input-component>
-                    <span slot="hint">Sektor (Max 3)</span>
-                    <select slot="input" name="Sectors" id="sectors" disabled>
-                    <option selected disabled>Loading...</option>
-                </select>
-                </input-component>
-                <button class="button-primary">TILFØJ</button>
-            </form>
-            <ul slot="list" id="sector-list">
-            </ul>
-        </form-component>
-    </li>
-    <li>
-        <button onclick="createCvForValidation()">boobs</button>
-    </li>
-</ul>
+                    <h1 slot="title">ERFARING</h1>
 
-</body>
+                    <form slot="form">
+
+                        <input-component name="input" id="name">
+                            <span slot="hint">Arbejdssted</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
+
+                        <input-component name="input" id="title">
+                            <span slot="hint">Stilling</span>
+                            <input slot="input" type="text" required>
+                        </input-component>
+
+                        <div>
+                        <input-component name="input" id="from">
+                            <span slot="hint">Start år</span>
+                            <input class="input-number" slot="input" type="number" required>
+                        </input-component>
+
+                        <input-component name="input" id="to">
+                            <span slot="hint">Slut år</span>
+                            <input class="input-number" slot="input" type="number" required>
+                        </input-component>
+                    </div>
+                            <button class="button-primary button-small">TILFØJ</button>
+                    </form>
+
+                    <ul slot="list" id="work-list" class="list-objects">
+
+                    </ul>
+                </form-component>
+            </li>
+
+            <li>
+                <form-component onsubmit="getUserDescription(this); return false;" id="description-form">
+
+                    <h1 slot="title">FRITEKST</h1>
+
+                    <form slot="form">
+                        <input-component>
+                            <span slot="hint">Fritekst</span>
+                            <textarea slot="input" rows="20" cols="50" ></textarea>
+                        </input-component>
+                        <button class="button-primary">GEM</button>
+                    </form>
+
+                </form-component>
+            </li>
+
+            <li>
+                <form-component onsubmit="addSector(this); return false;" id="sector-form">
+
+                    <h1 slot="title">SEKTORER</h1>
+
+                    <form slot="form">
+                        <input-component>
+                            <span slot="hint">Sektor (Max 3)</span>
+                            <select slot="input" name="Sectors" id="sectors" disabled>
+                            <option selected disabled>Loading...</option>
+                        </select>
+                        </input-component>
+                        <button class="button-primary">TILFØJ</button>
+                    </form>
+
+                    <ul slot="list" id="sector-list"></ul>
+                </form-component>
+            </li>
+
+            <li>
+                <button onclick="createCvForValidation()">boobs</button>
+            </li>
+        </ul>
+
+    </body>
 </html>
