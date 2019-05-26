@@ -1,4 +1,11 @@
 
+
+/*----------------------------------------------------------------------------*\
+
+#CONTENT
+
+\*----------------------------------------------------------------------------*/
+
 body {
     background-image: linear-gradient(to bottom right,
     var(--secondary-color),  var(--primary-color));
@@ -95,6 +102,13 @@ button:focus {
     min-width: 120px;
 }
 
+/*----------------------------------------------------------------------------*\
+
+#INPUT
+
+\*----------------------------------------------------------------------------*/
+
+
 input{
     background-color: transparent;
     border-style: none;
@@ -111,10 +125,23 @@ input:focus{
 .input-number{
     width: 140px;
 }
-.invisible-title{
-  display: none;
-}
+
+/*----------------------------------------------------------------------------*\
+
+#PATH
+
+\*----------------------------------------------------------------------------*/
+
 
 path{
     fill: white;
+}
+
+.svg-btn{
+    border-style: none;
+    border-radius: 0;
+}
+
+.svg-btn:hover{
+    background-color: transparent;
 }

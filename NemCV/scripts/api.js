@@ -42,7 +42,7 @@ function dropdownError(){
 
 function createCvForValidation(){
 
-    const education = eduList;
+  /*  const education = eduList;
     const employers = workList;
     const sectors = sectorList;
     const userInfo = info;
@@ -55,9 +55,44 @@ function createCvForValidation(){
 
 
 
-    const cv = {name, age, email, city, picture, description, employers, education, sectors};
+    const cv = {name, age, email, city, picture, description, employers, education, sectors};*/
+    const cv = {
+        "name": "Hest McHestert",
+        "age": 34,
+        "email": "hest@hestenettet.dk",
+        "city": "Hestved",
+        "picture": "https://c8.alamy.com/comp/EJ3JX7/architect-with-blueprints-gesturing-thumbs-up-outdoors-EJ3JX7.jpg",
+        "description": "Håber jeg finder det fede arbejde",
+        "employers":[
+            {
+                "name": "Google",
+                "title": "Pedel",
+                "from": "2012"
+            },
+            {
+                "name": "Stalden",
+                "title": "Vallak",
+                "from": "2007-01-01",
+                "to": "2012-03-01"
+            }
+        ],"education": [
+            {
+                "name": "ITU",
+                "title": "cand.it",
+                "from": "2018",
+                "to": "2020"
+            }
+        ],
+        "sectors": [
+            "Transport", "Kultur og fritid"
+        ]
+    };
 
-    validateCV(cv);
+
+    if(validateCV(cv)){
+        window.location = "cv.html";
+        window.localStorage.setItem("cv",JSON.stringify(cv));
+    }
 
     console.log(JSON.stringify(cv));
 
